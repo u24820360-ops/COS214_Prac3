@@ -1,0 +1,8 @@
+#!/bash/bin
+zipname="COS214_Practical3"
+# zip the necessary h and cpp files 
+zip -j 
+
+./pdf #create the pdf submission file
+zip -j $zipname makefile subbmission.pdf
+
