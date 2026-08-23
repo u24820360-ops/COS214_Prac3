@@ -1,0 +1,2 @@
+#!/bash/bin
+pandoc Written_Answers.md -o submission.pdf

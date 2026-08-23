@@ -1,4 +1,25 @@
-# Quest Music Festival PDF Solutions
+
+---
+geometry:
+    - top = 1cm
+    - bottom = 1cm
+    - left = 1cm
+    - right = 1cm  
+header-includes:
+    - \usepackage{float}
+    - \makeatletter\def\fps@figure{H}\makeatletter
+---
+
+# COS214 Practical 3
+
+__Courtesy of__
+
+- Azolile Mbanga : `u24820360`
+- Nicole Bare : `u25443705`
+- Patrick Simuyemba : `u25632354`
+
+
+__Task 1: Event concept and completed architecture__
 
 _1.1_
 
@@ -49,3 +70,6 @@ _1.4_
 -    (c)EventComponents are registered in the Subject's Observer registry. When EventControl issues a notification, it pushes the notification to each registered EventComponent through update(). Each component then responds according to its own implementation. The Subject will hold the registry of EventComponents and when a notification is issued by EventControl, the registered EventComponents receive the communication and act accordingly.
 -    (d)EventControl does not need to know about the individual concrete classes, reducing tight coupling. It only sends a notification to the registered Observers, which then respond according to their own implementations. Therefore, new EventComponents or changes to existing components can be made without requiring changes to EventControl, supporting the Open/Closed Principle.
 -    (e)The EventControl and EventComponent classes are part of both the Observer and Composite patterns. This is not a misuse of either pattern in both cases. The EventControl as the ConcreteSubject in the Observer pattern implements functionality to store objects that are observing it and sends update notifications to these objects. As a Client in the Composite pattern, it manipulates the objects that comprise the part-whole composite structure. The EventComponent, as the ConcreteObserver in the Observer pattern, implements the update operation used to receive pushed notifications and responds according to its concrete implementation. As a Component it provides the interface with which the client uses.
+
+
+__Task2 :__
