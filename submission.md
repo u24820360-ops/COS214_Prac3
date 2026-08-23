@@ -19,4 +19,6 @@ __Courtesy of__
 - Patrick Simuyemba : `u25632354`
 
 
-### Task 1: Event concept and completed architecture 
+__Task 1: Event concept and completed architecture__
+
+___
