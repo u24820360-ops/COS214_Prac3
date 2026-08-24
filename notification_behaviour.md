@@ -13,33 +13,6 @@ enum NotificationType
     SECURITY_ALERT
 };
 
-//the following is for determining whether a facility is down or accessible eg if the gate is open then it will have a status of OPEN if the security shift is on then then it will have a status of ACTIVE else IDLE
-enum class Status {
-    // Standard Operational States
-    IDLE,                      // Initial state / Personnel off-shift
-    OPEN,          // Venue open and fully accessible
-    ACTIVE,        // Personnel on-shift and active
-    CLOSED,           // Venue closed during normal off-hours
-
-    // Weather Response States (WEATHER_ALERT)
-    CLOSED_WEATHER_SAFETY,     // Physical area closed due to severe weather
-    STANDBY_WEATHER_DUTY,      // Personnel remaining active to assist during weather
-    CEASED_DUTIES_WEATHER,     // Non-essential staff (cleaners) pausing work
-
-    // Schedule & Delay Response States (SCHEDULE_CHANGE)
-    PAUSED_SCHEDULE_CHANGE,    // Stage performance temporarily paused (~30 mins)
-
-    // Capacity & Gate Response States (CAPACITY_ALERT)
-    ENTRY_RESTRICTED,          // Turnstiles closed to new entry; exit open
-    PATROL_GATE_RESTRICTION,   // Security patrolling boundaries to stop entry
-
-    // Security & Emergency Response States (SECURITY_ALERT)
-    HALTED_SECURITY_THREAT,    // Venue or food truck operations halted
-    HIGH_ALERT_PATROL,         // Security investigating or securing perimeters
-    CHILD_PROTECTION_LOCKDOWN  // Caretakers securing/supervising children
-};
-```
-
 ---
 
 ## OPEN
