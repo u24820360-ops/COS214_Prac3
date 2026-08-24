@@ -1,16 +1,23 @@
 #ifndef STATUS_H
 #define STATUS_H
 
-#include <iostream>
-#include <vector>
-#include <string>
-
-class Status {
-private:
-
-public:
-    Status();
-    virtual ~Status();
+enum class Status
+{
+	UNDEFINED,
+	CASCADE,
+	IDLE,
+	OPERATIONAL_OPEN,
+	OPERATIONAL_ACTIVE,
+	FACILITY_CLOSED,
+	CLOSED_WEATHER_SAFETY,
+	STANDBY_WEATHER_DUTY,
+	CEASED_DUTIES_WEATHER,
+	PAUSED_SCHEDULE_CHANGE,
+	ENTRY_RESTRICTED,
+	PATROL_GATE_RESTRICTION,
+	HALTED_SECURITY_THREAT,
+	HIGH_ALERT_PATROL,
+	CHILD_PROTECTION_LOCKDOWN
 };
 
 #endif // STATUS_H

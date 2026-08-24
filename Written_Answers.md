@@ -58,6 +58,7 @@ Quest Music Festival
 ```
 
 _1.2_
+
 -    Subject: Subject, Observer: Observer, ConcreteSubject: EventControl, ConcreteObserver: EventComponent, EventUnit and its subclasses; FoodTruck, SecurityTeam, MainStage, Playground, CleanerTeam, ToiletStall, EntranceGate, CaretakerTeam, EventGroup and its subclasses; QuestMusicFestival, MensBathroom, WomensBathroom, EntranceGateArea, KidsArea, MainStageArea, BathroomArea, FoodCourtArea
 -    Component: EventComponent, Composite: EventGroup, Leaf: EventUnit, Client: EventControl
 -    EventComponent participates in both the Observer and the Composite patterns acting as a bridge between them. As a ConcreteObserver in the Observer pattern, EventComponent implements the update operation used to receive pushed notifications from the Subject and allows each concrete component to react according to its own behaviour. It receives pushed notifications that it would need to act accordingly on. As a Component in the Composite pattern, EventComponent provides the common interface for both EventGroup and EventUnit and allows the client to treat individual units and groups uniformly.

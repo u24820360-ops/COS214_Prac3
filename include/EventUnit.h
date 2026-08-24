@@ -5,12 +5,25 @@
 #include <vector>
 #include <string>
 
-class EventUnit {
-private:
+#include "EventComponent.h"
 
+/**
+ * @class EventUnit
+ * @brief GoF Leaf abstract class in Composite pattern
+ * - inherits from EventComponent and defines a single unit of EventComponent
+ */
+class EventUnit : public EventComponent
+{
 public:
-    EventUnit();
-    virtual ~EventUnit();
+	// functions described in superclass
+	
+	virtual ~EventUnit() {}
+	virtual void display(std::string indent="") = 0;
+	virtual void setStatus(Notification notification) = 0;
+
+protected:
+	EventUnit(std::string name);
+	EventUnit();
 };
 
 #endif // EVENTUNIT_H
