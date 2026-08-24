@@ -55,6 +55,14 @@ public:
 	 * @return void
 	 */
 	void admit(int people);
+	
+	/**
+	 * @brief remove people from the event
+	 * - reduce occupancy byt the number of people leaving event
+	 * @param people Number of people leaving the event
+	 * @return void 
+	 */
+	void leaveEvent(int people);
 
 private:
 	EventControl();

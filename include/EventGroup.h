@@ -5,12 +5,33 @@
 #include <vector>
 #include <string>
 
-class EventGroup {
-private:
+#include "EventComponent.h"
+#include "Cascade.h"
+#include "Status.h"
 
+class EventGroup : public EventComponent
+{
 public:
-    EventGroup();
-    virtual ~EventGroup();
+	/**
+	 * @brief Constructor
+	 * @param name name of EventGroup
+	 */
+	EventGroup(std::string name);
+	~EventGroup();
+	
+
+	void add(EventComponent* child);
+	virtual void update();//update all the children
+	void remove(EventComponent* child);
+	void display(std::string indent="");
+	std::vector<EventComponent*> getChildren();
+
+
+protected:
+	std::vector<EventComponent *> children;
+
+private:
+	EventGroup();
 };
 
 #endif // EVENTGROUP_H

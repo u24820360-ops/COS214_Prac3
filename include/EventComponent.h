@@ -9,6 +9,7 @@
 #include "Subject.h"
 #include "Notification.h"
 #include "Status.h"
+#include "Cascade.h"
 #include "EventControl.h"
 
 /**
@@ -32,7 +33,7 @@ public:
 	/**
 	 * @brief add EventComponent to children vector in EventGroup for composite evnt type
 	 * - Does nothing for leaf EventComponent because it doea not contain a vector of EventComponent
-	 * @param child Even component to be added to vector of event components for EventGroup
+	 * @param child EventComponent to be added to vector of event components for EventGroup
 	 */
 	virtual void add(EventComponent *child) {}
 
@@ -45,7 +46,14 @@ public:
 	virtual void remove(EventComponent *target) {}
 
 	// inherited from observer superclass
-	void update();
+	virtual void update();
+
+	// /**
+	//  * @brief update the subject pointer
+	//  * @param Subject Pointer to a subject to be observed
+	//  * @return void
+	//  */
+	// void observe(EventControl *subject);
 
 	/**
 	 * @brief print information for EventComponent
@@ -77,7 +85,7 @@ public:
 	 * @brief return status of VeentComponent
 	 * @return Status EventComponent status
 	 */
-	Status* getStatus();
+	Status *getStatus();
 
 	/**
 	 * @brief set status to new passed in status
@@ -85,14 +93,15 @@ public:
 	 * @param status new status
 	 * @return void
 	 */
-	void setStatus(Status* status);
-	
+	void setStatus(Status *status);
+
 	/**
 	 * @brief Determine the appropriate next state base on notification
+	 * - always returns Cascade for EventGroup since it's status is a combination of the childrens status
 	 * @param notification Notification from subject
 	 * @return Status* new status
 	 */
-	virtual Status* determineStatus(Notification Notification)=0; 
+	virtual Status *determineStatus(Notification Notification);
 
 	/**
 	 * @brief set Subject to passed in subject parameter
@@ -110,7 +119,7 @@ protected:
 	Notification notification;
 	int capacity;
 	int occupancy;
-	Status* status;
+	Status *status;
 
 private:
 	EventComponent();

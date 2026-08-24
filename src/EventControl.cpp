@@ -45,3 +45,12 @@ void EventControl::admit(int people)
 		this->updateNotification(Notification::CAPACITY_ALERT);
 	}
 }
+
+void EventControl::leaveEvent(int people)
+{
+	this->occupancy = people > this->occupancy ? 0 : this->occupancy - people;
+	if (this->occupancy < this->capacity && this->notification == Notification::CAPACITY_ALERT)
+	{
+		this->updateNotification(Notification::OPEN);
+	}
+}
