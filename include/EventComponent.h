@@ -34,9 +34,17 @@ public:
 	 * - Does nothing for leaf EventComponent because it doea not contain a vector of EventComponent
 	 * @param child Even component to be added to vector of event components for EventGroup
 	 */
-	virtual void add(EventComponent *child);
+	virtual void add(EventComponent *child) {}
 
-	//inherited from observer superclass
+	/**
+	 * @brief remove target EventComponent from children list
+	 * - does nothing for leaf components
+	 * @param target the child to be removed from the children list
+	 * @return void
+	 */
+	virtual void remove(EventComponent *target) {}
+
+	// inherited from observer superclass
 	void update();
 
 	/**
@@ -44,49 +52,55 @@ public:
 	 * @param indent Level of indention for nested components
 	 * @return void
 	 */
-	virtual void display(std::string indent="")=0;
+	virtual void display(std::string indent = "");
 
 	/**
 	 * @brief return name of EventComponent
 	 * @return string
 	 */
 	std::string getName();
-	
+
 	/**
 	 * @brief return vector of children EventComponents
 	 * @return vector<EventComponent*>
 	 */
-	virtual std::vector<EventComponent*> getChildren();
+	virtual std::vector<EventComponent *> getChildren() { return {}; }
 
 	/**
 	 * @brief update EventComponent name
 	 * @param name new name
-	 * @return void 
+	 * @return void
 	 */
 	void setName(std::string name);
-	
+
 	/**
 	 * @brief return status of VeentComponent
 	 * @return Status EventComponent status
 	 */
-	Status getStatus();
-	
+	Status* getStatus();
+
 	/**
 	 * @brief set status to new passed in status
 	 * - sets status based on the notification passed in
-	 * @param Notification new status
+	 * @param status new status
 	 * @return void
 	 */
-	virtual void setStatus(Notification notification)=0;
+	void setStatus(Status* status);
 	
+	/**
+	 * @brief Determine the appropriate next state base on notification
+	 * @param notification Notification from subject
+	 * @return Status* new status
+	 */
+	virtual Status* determineStatus(Notification Notification)=0; 
+
 	/**
 	 * @brief set Subject to passed in subject parameter
 	 * @param subject new subject
 	 * @return void
 	 */
 	void setSubject(EventControl *subject);
-	
-	
+
 protected:
 	/**
 	 * @brief subject beign observed
@@ -95,10 +109,11 @@ protected:
 	std::string name;
 	Notification notification;
 	int capacity;
-	Status status;
+	int occupancy;
+	Status* status;
 
 private:
 	EventComponent();
 };
 
-#endif 
+#endif

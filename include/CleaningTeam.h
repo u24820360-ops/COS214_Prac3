@@ -5,12 +5,25 @@
 #include <vector>
 #include <string>
 
-class CleaningTeam {
-private:
+#include "Status.h"
+#include "Active.h"
+#include "Idle.h"
+#include "HighAlert.h"
+#include "Notification.h"
+#include "EventUnit.h"
 
+/**
+ * @class CleaningTeam
+ * @brief Concrete EventUnit/Personnel 
+ */
+class CleaningTeam:EventUnit{
 public:
-    CleaningTeam();
-    virtual ~CleaningTeam();
+	CleaningTeam(std::string name);
+	virtual ~CleaningTeam() {}
+	Status* determineStatus(Notification notification);
+	
+	private: 
+	CleaningTeam();
 };
 
 #endif // CLEANINGTEAM_H

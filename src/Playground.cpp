@@ -1,22 +1,19 @@
-#include "MainStage.h"
+#include "Playground.h"
 
 using namespace std;
 
-MainStage::MainStage(string name) : EventUnit(name) {}
+Playground::Playground(string name) : EventUnit(name) {}
 
-Status *MainStage::determineStatus(Notification notification)
+Status *Playground::determineStatus(Notification notification)
 {
 	switch (notification)
 	{
 	case Notification::OPEN:
 		return new Open();
-		
 	case Notification::CLOSE:
 	case Notification::WEATHER_ALERT:
 		return new Closed();
-	
 	case Notification::SECURITY_ALERT:
-	case Notification::SCHEDULE_CHANGE:
 		return new Paused();
 	default:
 		return this->status;

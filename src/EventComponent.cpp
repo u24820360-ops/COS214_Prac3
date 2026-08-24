@@ -7,13 +7,9 @@ EventComponent::EventComponent(std::string name)
 	this->name = name;
 	this->subject = nullptr;
 	this->capacity = 0;
-	this->status = Status::UNDEFINED;
+	this->occupancy = 0;
+	this->status = nullptr;
 	this->notification = Notification::UNDEFINED;
-}
-
-void EventComponent::add(EventComponent *child)
-{
-	// do nothing by default
 }
 
 void EventComponent::update()
@@ -22,28 +18,35 @@ void EventComponent::update()
 	{
 		this->notification = this->subject->getNotification();
 		this->capacity = this->subject->getCapacity();
-		this->setStatus(this->subject->getNotification());
+		this->setStatus(this->determineStatus(this->subject->getNotification()));
 	}
 }
 
 string EventComponent::getName() { return this->name; }
-
-vector<EventComponent *> EventComponent::getChildren()
-{
-	return {}; // empty for non composite EventComponents
-}
 
 void EventComponent::setName(std::string name)
 {
 	this->name = name;
 }
 
-Status EventComponent::getStatus()
+Status* EventComponent::getStatus()
 {
 	return this->status;
+}
+
+void EventComponent::setStatus(Status* status) 
+{
+	if(this->status) delete this->status;
+	this->status=status;
 }
 
 void EventComponent::setSubject(EventControl *subject)
 {
 	this->subject = subject;
+}
+
+void EventComponent::display (string indent ) 
+{
+	cout << this->name << endl
+	<<indent << "Status: " << this->status << endl;
 }

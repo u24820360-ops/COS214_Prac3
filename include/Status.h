@@ -1,23 +1,22 @@
 #ifndef STATUS_H
 #define STATUS_H
 
-enum class Status
+#include <string>
+#include <vector>
+#include <iostream>
+
+/**
+ * @class Status
+ * - manages the status of the EventComponent object
+ */
+class Status
 {
-	UNDEFINED,
-	CASCADE,
-	IDLE,
-	OPERATIONAL_OPEN,
-	OPERATIONAL_ACTIVE,
-	FACILITY_CLOSED,
-	CLOSED_WEATHER_SAFETY,
-	STANDBY_WEATHER_DUTY,
-	CEASED_DUTIES_WEATHER,
-	PAUSED_SCHEDULE_CHANGE,
-	ENTRY_RESTRICTED,
-	PATROL_GATE_RESTRICTION,
-	HALTED_SECURITY_THREAT,
-	HIGH_ALERT_PATROL,
-	CHILD_PROTECTION_LOCKDOWN
+public:
+/**
+ * @brief return different message depending on the state of event component
+ * @return string
+ */
+	virtual std::string getMessage()=0;
 };
 
-#endif // STATUS_H
+#endif

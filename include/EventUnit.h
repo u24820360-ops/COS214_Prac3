@@ -15,11 +15,7 @@
 class EventUnit : public EventComponent
 {
 public:
-	// functions described in superclass
-	
 	virtual ~EventUnit() {}
-	virtual void display(std::string indent="") = 0;
-	virtual void setStatus(Notification notification) = 0;
 
 protected:
 	EventUnit(std::string name);

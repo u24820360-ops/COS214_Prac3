@@ -17,9 +17,9 @@ enum NotificationType
 enum class Status {
     // Standard Operational States
     IDLE,                      // Initial state / Personnel off-shift
-    OPERATIONAL_OPEN,          // Venue open and fully accessible
-    OPERATIONAL_ACTIVE,        // Personnel on-shift and active
-    FACILITY_CLOSED,           // Venue closed during normal off-hours
+    OPEN,          // Venue open and fully accessible
+    ACTIVE,        // Personnel on-shift and active
+    CLOSED,           // Venue closed during normal off-hours
 
     // Weather Response States (WEATHER_ALERT)
     CLOSED_WEATHER_SAFETY,     // Physical area closed due to severe weather
