@@ -53,6 +53,11 @@ public:
 	
 	Status* determineStatus(Notification notification);
 
+	//Task4 updates:
+	int getStockLevel() const;
+	void setStockLevel(int stock);
+	bool needRestock() const;
+
 protected:
 	FoodTruck();
 
@@ -60,6 +65,10 @@ protected:
 	 * @brief list of foods being served eg Salvory rice, beef jerky, pork chop, chicken leg #Monastery special
 	 */
 	std::vector<std::string> menu;
+
+//Task4 updates:
+private:
+	int stockLevel;
 };
 
 #endif // FOODTRuCK_H

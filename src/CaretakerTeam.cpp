@@ -14,6 +14,10 @@ Status *CaretakerTeam::determineStatus(Notification notification)
 	case Notification::WEATHER_ALERT:
 		return new Idle();
 
+	//Task4 update:
+	case Notification::LOST_CHILD_ALRET:
+		return new Active();
+
 	default:
 		return this->status;
 	}

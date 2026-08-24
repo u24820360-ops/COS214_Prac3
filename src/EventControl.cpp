@@ -45,3 +45,13 @@ void EventControl::admit(int people)
 		this->updateNotification(Notification::CAPACITY_ALERT);
 	}
 }
+
+//Task4 Condition-Based update: 
+void EventControl::admit(int people) {
+    occupancy += people;
+
+    if(occupancy >= (capacity * 9) / 10)
+    {
+        updateNotification(Notification::CAPACITY_ALERT);
+    }
+}

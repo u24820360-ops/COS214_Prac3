@@ -26,8 +26,14 @@ public:
 	virtual ~MainStage() {}
 	Status* determineStatus(Notification notification);
 
+	//Task4 updates:
+	bool isVipOnly() const;
+	void setVipOnly(bool value);
+
 private:
 	MainStage();
+	//Task4 update:
+	bool vipOnly;
 };
 
 #endif // MAINSTAGE_H

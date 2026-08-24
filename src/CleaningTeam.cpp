@@ -13,6 +13,10 @@ Status *CleaningTeam::determineStatus(Notification notification)
 	case Notification::CLOSE:
 		return new Idle();
 
+	//Task4 update:
+	case Notification::CAPACITY_ALERT:
+		return new HighAlert();
+
 	default:
 		return this->status;
 	}
