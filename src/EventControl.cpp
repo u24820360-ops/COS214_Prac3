@@ -25,6 +25,7 @@ int EventControl::getCapacity()
 	return this->capacity;
 }
 
+//task4 condition based update
 void EventControl::admit(int people)
 {
 	int remaining = this->capacity - this->occupancy;

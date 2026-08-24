@@ -39,14 +39,29 @@ Status* FoodTruck::determineStatus(Notification notification)
 	case Notification::CAPACITY_ALERT:
 	case Notification::OPEN:
 		return new Open();
-		
 	
-		case Notification::SECURITY_ALERT:
+	case Notification::SECURITY_ALERT:
 	case Notification::CLOSE:
 		return new Closed();
-		
+	
+	//Task4 update:
+	case Notification::LOW_STOCK_ALERT:
+		return new Paused();
 
 	default:
 		return new Closed();
 	}
+}
+
+//Task4 updates:
+int FoodTruck::getStockLevel() const {
+	return stockLevel;
+}
+
+void FoodTruck::setStockLevel(int stock) {
+	stockLevel = stock;
+}
+
+bool FoodTruck::needRestock() const {
+	return stockLevel < 20;
 }
