@@ -54,8 +54,23 @@ public:
 	Status* determineStatus(Notification notification);
 
 	//Task4 updates:
+/**
+ * @brief Retrieve the current food stock level.
+ *
+ * @return Remaining stock quantity.
+ */
 	int getStockLevel() const;
+/**
+ * @brief Update the available stock level.
+ *
+ * @param stock New stock quantity.
+ */
 	void setStockLevel(int stock);
+/**
+ * @brief Determine whether the truck requires restocking.
+ *
+ * @return true if stock has fallen below the operational threshold.
+ */
 	bool needRestock() const;
 
 protected:
@@ -68,6 +83,9 @@ protected:
 
 //Task4 updates:
 private:
+/**
+ * @brief Current quantity of food stock available for service.
+ */
 	int stockLevel;
 };
 
