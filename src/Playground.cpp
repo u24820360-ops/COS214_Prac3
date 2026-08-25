@@ -14,8 +14,6 @@ Status *Playground::determineStatus(Notification notification)
 	case Notification::WEATHER_ALERT:
 		return new Closed();
 	case Notification::SECURITY_ALERT:
-		return new Paused();
-
 	//Task4 update:
 	case Notification::LOST_CHILD_ALRET:
 		return new Paused();

@@ -47,6 +47,7 @@ void EventControl::admit(int people)
 	}
 }
 
+
 void EventControl::leaveEvent(int people)
 {
 	this->occupancy = people > this->occupancy ? 0 : this->occupancy - people;
@@ -55,3 +56,4 @@ void EventControl::leaveEvent(int people)
 		this->updateNotification(Notification::OPEN);
 	}
 }
+
