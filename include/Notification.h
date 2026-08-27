@@ -12,7 +12,7 @@ enum class Notification
 	SECURITY_ALERT,
 
 	//Task4 updates:
-	LOST_CHILD_ALRET,
+	LOST_CHILD_ALERT,
 	LOW_STOCK_ALERT,
 	VIP_MODE
 };

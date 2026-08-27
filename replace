@@ -1,5 +1,0 @@
-#!/bin/bash
-
-find ./include -type f -name "*.h"  -exec sed -i "s|: public EventUnit||g" {} +
-find ./include -type f -name "*.h"  -exec sed -i "s|: EventUnit(name)||g" {} +
-find ./include -type f -name "*.h"  -exec sed -i "s|: EventUnit||g" {} +

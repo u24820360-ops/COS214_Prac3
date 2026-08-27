@@ -4,7 +4,12 @@ using namespace std;
 
 Subject::~Subject()
 {
-	// do nothing, you are not reposnible for handling your memory
+	auto iterator = this->observers.begin();
+	while(iterator != this->observers.end()) 
+	{
+		(*iterator)->detach(); //set te observers subject to null cos this subject can no longer be observed
+		++iterator;
+	}
 }
 
 void Subject::attach(Observer *observer)
@@ -20,7 +25,6 @@ void Subject::attach(Observer *observer)
 			iterator++;
 		}
 		this->observers.push_back(observer);
-		observer->update();
 	}
 }
 

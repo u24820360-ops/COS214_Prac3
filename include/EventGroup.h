@@ -23,6 +23,7 @@ public:
 	void add(EventComponent* child);
 	virtual void update();//update all the children
 	void remove(EventComponent* child);
+	void setSubject(EventControl* subject);
 	void display(std::string indent="");
 	std::vector<EventComponent*> getChildren();
 

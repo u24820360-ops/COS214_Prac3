@@ -15,6 +15,20 @@ EventGroup::~EventGroup()
 	}
 }
 
+void EventGroup::setSubject(EventControl* subject) 
+{
+	this->subject=subject;
+	if(this->subject) this->update();
+	
+	//make the children subscribe to the same subject
+	auto iterator = this->children.begin();
+	while(iterator != this->children.end()) 
+	{
+		(*iterator)->setSubject(subject);
+	}
+	
+}
+
 void EventGroup::add(EventComponent *child)
 {
 	if (child)

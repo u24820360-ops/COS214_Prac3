@@ -22,6 +22,12 @@ public:
 	 */
 	virtual void update() = 0;
 	
+	/**
+	 * @brief set observers subject to null
+	 * @return void
+	 */
+	virtual void detach() = 0;
+	
 	
 protected:
 	Observer();

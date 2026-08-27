@@ -2,14 +2,19 @@
 #include <iostream>
 
 using namespace std;
-EventComponent::EventComponent(std::string name)
+EventComponent::EventComponent(string name)
 {
 	this->name = name;
-	this->subject = nullptr;
+	this->subject = subject;
 	this->capacity = 0;
 	this->occupancy = 0;
 	this->status = nullptr;
 	this->notification = Notification::UNDEFINED;
+}
+
+EventComponent::~EventComponent()
+{
+	this->subject->detach(this); // remove this observer from subject
 }
 
 void EventComponent::update()
@@ -25,14 +30,15 @@ void EventComponent::update()
 	}
 }
 
-// void EventComponent::observe(EventControl* subject)
-// {
-// 	if(subject) this->subject=subject;
-// }
+void EventComponent::detach()
+{
+	if (this->subject)
+		this->subject = nullptr;
+}
 
 string EventComponent::getName() { return this->name; }
 
-void EventComponent::setName(std::string name)
+void EventComponent::setName(string name)
 {
 	this->name = name;
 }

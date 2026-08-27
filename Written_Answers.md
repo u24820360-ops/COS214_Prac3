@@ -106,7 +106,7 @@ _3.3_
 - Ordinary operational change: `OPEN, CLOSE, SCHEDULE_CHANGE`.
 - Capacity-related change: `CAPACITY_ALERT`.
 - Safety-related change: `WEATHER_ALERT, SECURITY_ALERT`.
-- Each leaf maps those notices onto a different status (`Open, Closed, Paused, Active, Idle, HighAlert`). 
+- Each leaf maps those notices onto a different status (`Cascade, Open, Closed, Paused, Active, Idle, HighAlert`). 
 
 _3.4_
 

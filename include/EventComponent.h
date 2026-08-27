@@ -27,6 +27,7 @@ public:
 	 * @brief Constructor: create instance of of event class.
 	 * note that you cannot instantiate object of abstract class
 	 * @param name identifier name for given EventComponent
+	 * @param subject Event control to be observed 
 	 */
 	EventComponent(std::string name);
 
@@ -47,13 +48,6 @@ public:
 
 	// inherited from observer superclass
 	virtual void update();
-
-	// /**
-	//  * @brief update the subject pointer
-	//  * @param Subject Pointer to a subject to be observed
-	//  * @return void
-	//  */
-	// void observe(EventControl *subject);
 
 	/**
 	 * @brief print information for EventComponent
@@ -109,6 +103,8 @@ public:
 	 * @return void
 	 */
 	void setSubject(EventControl *subject);
+	
+	void detach();
 
 protected:
 	/**
