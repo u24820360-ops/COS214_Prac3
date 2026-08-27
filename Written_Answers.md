@@ -73,6 +73,7 @@ _1.4_
 -    (e)The EventControl and EventComponent classes are part of both the Observer and Composite patterns. This is not a misuse of either pattern in both cases. The EventControl as the ConcreteSubject in the Observer pattern implements functionality to store objects that are observing it and sends update notifications to these objects. As a Client in the Composite pattern, it manipulates the objects that comprise the part-whole composite structure. The EventComponent, as the ConcreteObserver in the Observer pattern, implements the update operation used to receive pushed notifications and responds according to its concrete implementation. As a Component it provides the interface with which the client uses.
 
 
+
 __Task 2: Composite event structure__
 
 _2.1 Completed_
@@ -119,3 +120,8 @@ _3.5_
 - `Pull` mode: `Subject::notify()` calls `Observer::update()` with no arguments. The observer then queries the subject: `EventComponent::update` calls `subject->getNotification()` and `subject->getCapacity()`, stores those values, and then computes a new `Status` through `determineStatus`.
 - Trade-off: pull keeps the `update` signature stable when extra subject state is added, because each observer requests only the fields it needs. The cost is that every observer must hold a subject pointer and know which getters to call. A push model would pass the notice (and capacity) into `update(...)` directly, which is simpler for observers but forces the subject interface to change whenever the payload grows.
 - Exact state transferred by pull: the current `Notification` (`OPEN`, `CLOSE`, `WEATHER_ALERT`, `SCHEDULE_CHANGE`, `CAPACITY_ALERT` or `SECURITY_ALERT`) and the integer `capacity`. `EventControl` uses occupancy internally to decide when to emit `CAPACITY_ALERT`; `EntranceGate` also reads capacity/occupancy for display after the pull.
+
+
+__Task4 :__
+_4.4_
+- The three original features are event-specific and don't create a god object because each feature belongs to the relevant leaf.
