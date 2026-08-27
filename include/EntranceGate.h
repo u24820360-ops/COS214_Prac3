@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-#include "EventUnit.h"
+#include "EventComponent.h"
 #include "Notification.h"
 #include "Status.h"
 #include "Closed.h"
@@ -16,7 +16,7 @@
  * - inherits from EventUnit
  * @brief Concrete leaf for EventComponent in Composite GoF Design Pattern
  */
-class EntranceGate:public  EventUnit{
+class EntranceGate : public EventComponent {
 private:
 
 public:

@@ -5,9 +5,9 @@
 #include <vector>
 #include <string>
 
-#include "EventUnit.h"
+#include "EventComponent.h"
 
-class Personnel : public EventUnit
+class Personnel : public EventComponent
 {
 public:
 	/**

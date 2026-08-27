@@ -2,7 +2,7 @@
 
 using namespace std;
 
-MainStage::MainStage(string name) : EventUnit(name) {}
+MainStage::MainStage(string name) : EventComponent(name) {}
 
 Status *MainStage::determineStatus(Notification notification)
 {

@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-#include "EventUnit.h"
+#include "EventComponent.h"
 #include "Status.h"
 #include "Open.h"
 #include "Closed.h"
@@ -16,7 +16,7 @@
  * - inherits from EventUnit
  * - ConcreteLeaf in Composite GoF Design Pattern
  */
-class FoodTruck : public EventUnit
+class FoodTruck : public EventComponent
 {
 
 public:

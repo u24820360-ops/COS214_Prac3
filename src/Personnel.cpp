@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Personnel::Personnel(string name) : EventUnit(name) {}
+Personnel::Personnel(string name) : EventComponent(name) {}
 
 vector<string> Personnel::getPersonnel() { return this->personnel; }
 

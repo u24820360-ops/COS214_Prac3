@@ -8,7 +8,7 @@
 #include "Status.h"
 #include "Closed.h"
 #include "Open.h"
-#include "EventUnit.h"
+#include "EventComponent.h"
 #include "Notification.h"
 
 /**
@@ -16,7 +16,7 @@
  * -inherits from EventUnit
  * -Concrete leaf in Composite GoF Design Pattern
  */
-class ToiletStall : EventUnit{
+class ToiletStall: public EventComponent {
 private:
 
 public:

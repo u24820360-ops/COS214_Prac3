@@ -2,7 +2,7 @@
 
 using namespace std;
 
-FoodTruck::FoodTruck(string name, vector<string> menu) : EventUnit(name), menu(menu) {}
+FoodTruck::FoodTruck(string name, vector<string> menu) : EventComponent(name), menu(menu) {}
 
 vector<string> FoodTruck::getMenu() { return this->menu; }
 

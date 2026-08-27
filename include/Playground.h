@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-#include "EventUnit.h"
+#include "EventComponent.h"
 #include "Notification.h"
 #include "Status.h"
 #include "Closed.h"
@@ -17,7 +17,7 @@
  * @brief Concrete EventUnit (Leaf)
  * -inherits from EventUnit
  */
-class Playground : public EventUnit
+class Playground : public EventComponent
 {
 public:
 	virtual ~Playground() {}

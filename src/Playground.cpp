@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Playground::Playground(string name) : EventUnit(name) {}
+Playground::Playground(string name) : EventComponent(name) {}
 
 Status *Playground::determineStatus(Notification notification)
 {

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-EntranceGate::EntranceGate(string name) : EventUnit(name) {}
+EntranceGate::EntranceGate(string name) : EventComponent(name) {}
 
 void EntranceGate::display(string indent)
 {

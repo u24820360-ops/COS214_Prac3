@@ -2,7 +2,7 @@
 
 using namespace std;
 
-ToiletStall::ToiletStall(string name) : EventUnit(name) {};
+ToiletStall::ToiletStall(string name) : EventComponent(name) {};
 
 Status *ToiletStall::determineStatus(Notification notification)
 {

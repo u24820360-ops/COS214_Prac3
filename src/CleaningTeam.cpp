@@ -2,7 +2,7 @@
 
 using namespace std;
 
-CleaningTeam::CleaningTeam(string name) : EventUnit(name) {}
+CleaningTeam::CleaningTeam(string name) : Personnel(name) {}
 
 Status *CleaningTeam::determineStatus(Notification notification)
 {

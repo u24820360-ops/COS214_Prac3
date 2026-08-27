@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-#include "EventUnit.h"
+#include "EventComponent.h"
 #include "Paused.h"
 #include "Closed.h"
 #include "Open.h"
@@ -15,7 +15,7 @@
  * @brief ConncreteLeaf in GoF Composite Deigin Pattern
  * -inherits from EvenUnit
  */
-class MainStage : EventUnit
+class MainStage : public EventComponent
 {
 public:
 /**

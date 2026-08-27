@@ -3,7 +3,7 @@
 
 using namespace std;
 
-SecurityTeam::SecurityTeam(string name) : EventUnit(name) {}
+SecurityTeam::SecurityTeam(string name) : Personnel(name) {}
 
 Status *SecurityTeam::determineStatus(Notification notification)
 {

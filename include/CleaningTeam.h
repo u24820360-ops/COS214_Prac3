@@ -10,13 +10,13 @@
 #include "Idle.h"
 #include "HighAlert.h"
 #include "Notification.h"
-#include "EventUnit.h"
+#include "Personnel.h"
 
 /**
  * @class CleaningTeam
  * @brief Concrete EventUnit/Personnel 
  */
-class CleaningTeam:EventUnit{
+class CleaningTeam: public Personnel {
 public:
 	CleaningTeam(std::string name);
 	virtual ~CleaningTeam() {}

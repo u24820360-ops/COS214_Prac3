@@ -5,12 +5,12 @@
 #include <vector>
 #include <string>
 
-#include "EventUnit.h"
+#include "Personnel.h"
 #include "Status.h"
 #include "Idle.h"
 #include "Active.h"
 
-class CaretakerTeam : EventUnit
+class CaretakerTeam: public Personnel
 {
 public:
 	CaretakerTeam(std::string name);

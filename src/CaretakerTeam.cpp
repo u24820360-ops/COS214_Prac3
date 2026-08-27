@@ -2,7 +2,7 @@
 
 using namespace std;
 
-CaretakerTeam::CaretakerTeam(string name) : EventUnit(name) {}
+CaretakerTeam::CaretakerTeam(string name) : Personnel(name) {}
 
 Status *CaretakerTeam::determineStatus(Notification notification)
 {
