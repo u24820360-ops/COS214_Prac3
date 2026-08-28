@@ -1,11 +1,15 @@
 TARGET=main
-FLAGS= -g -std=c++11 -Werror -Wall -I
+FLAGS= -g -std=c++11 -Werror -Wall -Iinclude -Isrc
 CXX = g++
 OBJ_DIR=obj
 
-objects=main.o
+OBJECTS=(saba)
 
-all : $(objects)
+all : $(TARGET)
+
+run : $(TARGET)
+	./$(TARGET)
+
 mem : $(target)
 	valgrind --leak-check=full --track-origins=yes ./$(target) memory.log 
 

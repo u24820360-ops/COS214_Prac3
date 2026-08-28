@@ -1,2 +1,0 @@
-#!/bash/bin
-pandoc submission.md -o submission.pdf
