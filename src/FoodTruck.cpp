@@ -18,14 +18,15 @@ void FoodTruck::updateMenu(string item)
 
 void FoodTruck::display(string indent)
 {
-	cout << this->name << endl
-		 << "FEAST WITH US: " << endl;
+	cout << "[L] " << this->name << endl
+	<< "[Status] " << (status ? this->status->getMessage() : "null") <<endl
+		 << "Menu: " << endl;
 
 	int list = 1;
 	auto iterator = this->menu.begin();
 	while (iterator != this->menu.end())
 	{
-		cout << indent << "[" << list++ << "]" << (*iterator) << endl;
+		cout << indent << "[" << list++ << "] " << (*iterator) << endl;
 		++iterator;
 	}
 }

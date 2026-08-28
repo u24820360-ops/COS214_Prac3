@@ -67,11 +67,12 @@ void EventComponent::setSubject(EventControl *subject)
 
 void EventComponent::display(string indent)
 {
-	cout << this->name << endl
-		 << indent << "Status: " << (status ? this->status->getMessage():"null") << endl;
+	cout << indent << "[L] " << this->name << endl
+		 << indent << "[Status] " << (status ? this->status->getMessage():"null") << endl;
 }
 
 Status *EventComponent::determineStatus(Notification notification)
 {
 	return new Cascade();
 }
+  

@@ -22,7 +22,7 @@ mem : $(TARGET)
 	valgrind --leak-check=full --track-origins=yes ./$(TARGET) 2> memory.log 
 
 clean:
-	rm -rf $(OBJ_DIR) $(TARGET)
+	rm -rf $(OBJ_DIR) $(TARGET) 
 	clear
 
 

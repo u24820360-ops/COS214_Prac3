@@ -17,22 +17,22 @@ int main()
     menu.push_back("Fries");
     menu.push_back("Soft Drink");
 
-    EventGroup* festival =
+    EventGroup *festival =
         new EventGroup("Music & Art Festival");
 
-    EventGroup* mainStageZone =
+    EventGroup *mainStageZone =
         new EventGroup("Main Stage Zone");
 
-    EventGroup* foodCourt =
+    EventGroup *foodCourt =
         new EventGroup("Food Court");
 
-    MainStage* stage =
+    MainStage *stage =
         new MainStage("Main Stage");
 
-    FoodTruck* foodTruck =
+    FoodTruck *foodTruck =
         new FoodTruck("Burger Truck", menu);
 
-    SecurityTeam* security =
+    SecurityTeam *security =
         new SecurityTeam("Festival Security");
 
     stage->setSubject(&eventControl);
@@ -53,20 +53,17 @@ int main()
 
     std::cout << "\n WEATHER ALERT \n";
     eventControl.updateNotification(
-        Notification::WEATHER_ALERT
-    );
+        Notification::WEATHER_ALERT);
 
     std::cout << "\n LOST CHILD ALERT \n";
     eventControl.updateNotification(
-        Notification::LOST_CHILD_ALERT
-    );
+        Notification::LOST_CHILD_ALERT);
 
     std::cout << "\n LOW STOCK ALERT \n";
     eventControl.updateNotification(
-        Notification::LOW_STOCK_ALERT
-    );
+        Notification::LOW_STOCK_ALERT);
 
-	//Task4.2 update:
+    // Task4.2 update:
     std::cout << "\n RUNTIME REORGANISATION \n";
 
     foodCourt->remove(foodTruck);
@@ -76,16 +73,15 @@ int main()
         << "Burger Truck moved to Main Stage Zone"
         << std::endl;
 
-	//Task4.3 update:
+    // Task4.3 update:
     std::cout << "\n VIP MODE \n";
 
     bool vipMode = true;
 
-    if(vipMode)
+    if (vipMode)
     {
         eventControl.updateNotification(
-            Notification::VIP_MODE
-        );
+            Notification::VIP_MODE);
     }
 
     std::cout << "\nABOUT TO DELETE FESTY\n";
