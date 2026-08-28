@@ -73,7 +73,7 @@ void EventGroup::remove(EventComponent *target)
 void EventGroup::display(string indent)
 {
 	cout << this->name << endl
-		 << "\t" << this->status << endl;
+		 << "\t" << (status? this->status->getMessage() : "null") << endl;
 
 	auto iterator = this->children.begin();
 	int list = 1;
