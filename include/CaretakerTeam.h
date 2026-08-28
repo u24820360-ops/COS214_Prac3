@@ -16,6 +16,7 @@ public:
 	CaretakerTeam(std::string name);
 	virtual ~CaretakerTeam() {}
 	Status *determineStatus(Notification notification);
+	virtual void setStatus(Notification notification);
 
 private:
 	CaretakerTeam();

@@ -30,7 +30,7 @@ public:
 	
 	
 protected:
-	Observer();
+	Observer() {};
 };
 
 #endif // OBSERVER_H

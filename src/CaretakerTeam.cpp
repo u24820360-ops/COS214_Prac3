@@ -10,7 +10,7 @@ Status *CaretakerTeam::determineStatus(Notification notification)
 	{
 	case Notification::OPEN:
 	//Task4 update:
-	case Notification::LOST_CHILD_ALRET:
+	case Notification::LOST_CHILD_ALERT:
 		return new Active();
 
 	case Notification::CLOSE:
@@ -21,4 +21,8 @@ Status *CaretakerTeam::determineStatus(Notification notification)
 	default:
 		return this->status;
 	}
+}
+
+void CaretakerTeam::setStatus(Notification notification) {
+	this->status = determineStatus(notification);
 }

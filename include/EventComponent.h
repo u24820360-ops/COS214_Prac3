@@ -21,7 +21,7 @@
 class EventComponent : public Observer
 {
 public:
-	virtual ~EventComponent() {};
+	virtual ~EventComponent();
 
 	/**
 	 * @brief Constructor: create instance of of event class.
@@ -32,8 +32,8 @@ public:
 	EventComponent(std::string name);
 
 	/**
-	 * @brief add EventComponent to children vector in EventGroup for composite evnt type
-	 * - Does nothing for leaf EventComponent because it doea not contain a vector of EventComponent
+	 * @brief add EventComponent to children vector in EventGroup for composite event type
+	 * - Does nothing for leaf EventComponent because it does not contain a vector of EventComponent
 	 * @param child EventComponent to be added to vector of event components for EventGroup
 	 */
 	virtual void add(EventComponent *child) {}
@@ -76,7 +76,7 @@ public:
 	void setName(std::string name);
 
 	/**
-	 * @brief return status of VeentComponent
+	 * @brief return status of EventComponent
 	 * @return Status EventComponent status
 	 */
 	Status *getStatus();
@@ -108,7 +108,7 @@ public:
 
 protected:
 	/**
-	 * @brief subject beign observed
+	 * @brief subject being observed
 	 */
 	EventControl *subject;
 	std::string name;

@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-#include "Observer.h"
+class Observer;
 
 /**
  * @class Subject
@@ -44,7 +44,7 @@ public:
 	std::vector<Observer*> observers ;
 	
 	protected:
-	Subject();
+	Subject() {};
 	
 };
 

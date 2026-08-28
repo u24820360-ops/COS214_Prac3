@@ -7,7 +7,7 @@ Personnel::Personnel(string name) : EventComponent(name) {}
 
 vector<string> Personnel::getPersonnel() { return this->personnel; }
 
-void Personnel::setPersonel(vector<string> personnel) { this->personnel = personnel; }
+void Personnel::setPersonnel(vector<string> personnel) { this->personnel = personnel; }
 
 void Personnel::addPersonnel(string personnel) { this->personnel.push_back(personnel); }
 

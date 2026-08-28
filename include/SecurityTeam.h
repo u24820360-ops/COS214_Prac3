@@ -10,17 +10,18 @@
 #include "Idle.h"
 #include "HighAlert.h"
 #include "Notification.h"
-#include "EventComponent.h"
+#include "Personnel.h"
 
 /**
  * @class SecurityTeam
  * @brief Concrete EventUnit/Personnel 
  */
-class SecurityTeam: public EventComponent {
+class SecurityTeam: public Personnel {
 public:
 	SecurityTeam(std::string name);
 	virtual ~SecurityTeam() {}
 	Status* determineStatus(Notification notification);
+	virtual void setStatus(Notification notification);
 	
 	private: 
 	SecurityTeam();

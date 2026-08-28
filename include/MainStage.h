@@ -12,8 +12,8 @@
 
 /**
  * @class MainStage
- * @brief ConncreteLeaf in GoF Composite Deigin Pattern
- * -inherits from EvenUnit
+ * @brief ConcreteLeaf in GoF Composite Design Pattern
+ * -inherits from EventUnit
  */
 class MainStage : public EventComponent
 {

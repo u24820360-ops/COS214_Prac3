@@ -17,6 +17,7 @@ public:
  * @return string
  */
 	virtual std::string getMessage()=0;
+	virtual ~Status() {};
 };
 
 #endif

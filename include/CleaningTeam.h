@@ -21,6 +21,7 @@ public:
 	CleaningTeam(std::string name);
 	virtual ~CleaningTeam() {}
 	Status* determineStatus(Notification notification);
+	virtual void setStatus(Notification notification);
 	
 	private: 
 	CleaningTeam();

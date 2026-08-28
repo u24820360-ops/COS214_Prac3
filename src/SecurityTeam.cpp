@@ -15,10 +15,14 @@ Status *SecurityTeam::determineStatus(Notification notification)
 		return new Idle();
 	case Notification::SECURITY_ALERT:
 	//Task4 updates:
-	case Notification::LOST_CHILD_ALRET:
+	case Notification::LOST_CHILD_ALERT:
 	case Notification::CAPACITY_ALERT:
 		return new HighAlert();
 	default:
 		return this->status;
 	}
+}
+
+void SecurityTeam::setStatus(Notification notification) {
+	this->status = determineStatus(notification);
 }

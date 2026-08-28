@@ -1,4 +1,5 @@
 #include "Subject.h"
+#include "Observer.h"
 #include <iostream>
 using namespace std;
 
@@ -7,7 +8,7 @@ Subject::~Subject()
 	auto iterator = this->observers.begin();
 	while(iterator != this->observers.end()) 
 	{
-		(*iterator)->detach(); //set te observers subject to null cos this subject can no longer be observed
+		(*iterator)->detach(); //set the observers subject to null cos this subject can no longer be observed
 		++iterator;
 	}
 }

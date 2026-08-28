@@ -23,20 +23,20 @@ public:
 	
 	/**
 	 * @brief set personnel list to passed in parameter
-	 * - replaces the entired personel list
+	 * - replaces the entire personnel list
 	 * @param personnel vector<string> of personnel names
 	 * @return void 
 	 */
-	void setPersonel(std::vector<std::string> personnel);
+	void setPersonnel(std::vector<std::string> personnel);
 	
 	/**
 	 * @brief add one person to personnel list
 	 * @param personnel name of person to be added
 	 * @return void
 	 */
-	void addPersonnel(string personnel);
+	void addPersonnel(std::string personnel);
 	
-	//functions desribed in superclass
+	//functions described in superclass
 	
 	void display(std::string indent="");
 	
@@ -50,7 +50,7 @@ protected:
 
 	/**
 	 * @brief Constructor
-	 * @param name name of the Personnel team eg "Stage Secturity"
+	 * @param name name of the Personnel team eg "Stage Security"
 	 */
 	Personnel(std::string name);
 

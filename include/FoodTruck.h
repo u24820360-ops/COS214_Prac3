@@ -8,6 +8,7 @@
 #include "EventComponent.h"
 #include "Status.h"
 #include "Open.h"
+#include "Paused.h"
 #include "Closed.h"
 #include "Notification.h"
 
@@ -40,7 +41,7 @@ public:
 	 * @param menu 
 	 * @return void
 	 */
-	void setMenu(std::vector<string> menu);
+	void setMenu(std::vector<std::string> menu);
 	
 	/**
 	 * @brief add item to the menu 
