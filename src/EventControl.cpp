@@ -4,6 +4,7 @@
 EventControl::EventControl(int capacity)
 {
 	this->capacity = capacity;
+	this->occupancy = 0;
 	this->notification = Notification::CLOSE;
 }
 

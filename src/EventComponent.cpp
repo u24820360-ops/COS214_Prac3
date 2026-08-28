@@ -5,7 +5,7 @@ using namespace std;
 EventComponent::EventComponent(string name)
 {
 	this->name = name;
-	this->subject = subject;
+	this->subject = nullptr;
 	this->capacity = 0;
 	this->occupancy = 0;
 	this->status = nullptr;
@@ -14,7 +14,9 @@ EventComponent::EventComponent(string name)
 
 EventComponent::~EventComponent()
 {
-	this->subject->detach(this); // remove this observer from subject
+	if (this->subject) this->subject->detach(this); // remove this observer from subject
+
+	if (this->status) delete this->status;
 }
 
 void EventComponent::update()
@@ -23,7 +25,10 @@ void EventComponent::update()
 	{
 		this->notification = this->subject->getNotification();
 		this->capacity = this->subject->getCapacity();
-		this->setStatus(this->determineStatus(this->subject->getNotification()));
+		Status* newStatus = this->determineStatus(this->subject->getNotification());
+		
+		if (newStatus) this->setStatus(newStatus);
+		
 		cout << endl
 			 << "Notification received" << endl;
 		this->display();
@@ -50,7 +55,7 @@ Status *EventComponent::getStatus()
 
 void EventComponent::setStatus(Status *status)
 {
-	if (this->status)
+	if (this->status != status)
 		delete this->status;
 	this->status = status;
 }

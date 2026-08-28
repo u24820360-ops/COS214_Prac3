@@ -50,5 +50,6 @@ void Subject::notify()
 	while (iterator != this->observers.end())
 	{
 		(*iterator)->update();
+		++iterator;
 	}
 }

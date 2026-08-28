@@ -35,25 +35,19 @@ int main()
     SecurityTeam* security =
         new SecurityTeam("Festival Security");
 
-    Playground* playground =
-        new Playground("Kids Area");
-
     stage->setSubject(&eventControl);
     security->setSubject(&eventControl);
     foodTruck->setSubject(&eventControl);
-    playground->setSubject(&eventControl);
 
     eventControl.attach(stage);
     eventControl.attach(security);
     eventControl.attach(foodTruck);
-    eventControl.attach(playground);
 
     festival->add(mainStageZone);
     festival->add(foodCourt);
 
     mainStageZone->add(stage);
     mainStageZone->add(security);
-    mainStageZone->add(playground);
 
     foodCourt->add(foodTruck);
 
@@ -94,7 +88,11 @@ int main()
         );
     }
 
+    std::cout << "\nABOUT TO DELETE FESTY\n";
+
     delete festival;
+
+    std::cout << "\nFESTY GONE\n";
 
     return 0;
 }

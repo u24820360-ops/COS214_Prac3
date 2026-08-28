@@ -10,7 +10,7 @@
 
 /**
  * @class EventControl
- * @brief EventCotrol for guiding the actions of the different sections/participants in EventFlow
+ * @brief EventControl for guiding the actions of the different sections/participants in EventFlow
  * @note ConcreteSubject in observer design pattern
  */
 class EventControl : public Subject
@@ -42,7 +42,7 @@ public:
 	int getCapacity();
 	
 	/**
-	 * @brief set the capacit yof EventControl
+	 * @brief set the capacity of EventControl
 	 * @param capcity new capacity
 	 * @return void
 	 */
@@ -51,7 +51,7 @@ public:
 	/**
 	 * @brief admit named number of people into event
 	 * increment occupancy by that number of people
-	 * @param poeple count of people being admited into the event
+	 * @param people count of people being admitted into the event
 	 * @return void
 	 */
 	void admit(int people);

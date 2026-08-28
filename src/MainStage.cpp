@@ -2,7 +2,7 @@
 
 using namespace std;
 
-MainStage::MainStage(string name) : EventComponent(name) {}
+MainStage::MainStage(string name) : EventComponent(name), vipOnly(false) {}
 
 Status *MainStage::determineStatus(Notification notification)
 {
@@ -21,7 +21,7 @@ Status *MainStage::determineStatus(Notification notification)
 		return new Paused();
 
 	default:
-		return this->status;
+		return nullptr;
 	}
 }
 
