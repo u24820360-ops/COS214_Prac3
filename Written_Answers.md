@@ -59,7 +59,7 @@ Quest Music Festival
 
 _1.2_
 
--    Subject: Subject, Observer: Observer, ConcreteSubject: EventControl, ConcreteObserver: EventComponent, EventUnit and its subclasses; FoodTruck, SecurityTeam, MainStage, Playground, CleanerTeam, ToiletStall, EntranceGate, CaretakerTeam, EventGroup and its subclasses; QuestMusicFestival, MensBathroom, WomensBathroom, EntranceGateArea, KidsArea, MainStageArea, BathroomArea, FoodCourtArea
+-    Subject: Subject, Observer: Observer, ConcreteSubject: EventControl, ConcreteObserver: EventComponent, FoodTruck, SecurityTeam, MainStage, Playground, CleanerTeam, ToiletStall, EntranceGate, CaretakerTeam, EventGroup
 -    Component: EventComponent, Composite: EventGroup, Leaf: EventUnit, Client: EventControl
 -    EventComponent participates in both the Observer and the Composite patterns acting as a bridge between them. As a ConcreteObserver in the Observer pattern, EventComponent implements the update operation used to receive pushed notifications from the Subject and allows each concrete component to react according to its own behaviour. It receives pushed notifications that it would need to act accordingly on. As a Component in the Composite pattern, EventComponent provides the common interface for both EventGroup and EventUnit and allows the client to treat individual units and groups uniformly.
 -    EventControl participates in both the Observer and the Composite patterns. As a ConcreteSubject in the Observer pattern, it has the implementation of the subject being observed and it implements the functionality to store objects that are observing it and sends update notifications to these objects. As a Client in the Composite pattern, it manipulates the objects that comprise the composite.
@@ -87,7 +87,7 @@ _2.4 Memory Management_
 - `EventGroup` owns its children. The destructor iterates the `children` vector and `delete`s each child. A leaf destructor releases only that leaf. A nested `EventGroup` destructor repeats the same walk, so deleting the root `questFestival` releases the entire owned subtree. Each node has exactly one owning parent, so each object is deleted exactly once.
 - Transfer rule: a component belongs to at most one composite at a time. To move a child, the old parent calls `remove(child)`, which unlinks the pointer and does not `delete` it; the new parent then calls `add(child)` and becomes the sole owner. `add` without a prior `remove` would leave two owners and cause a double-free when both composites are destroyed. No `delete` is performed during a transfer.
 
-__Task 3: Observer Nnotification sysytem__
+__Task 3: Observer Notification system__
 
 _3.1 Observer/Subject_
 
@@ -124,4 +124,4 @@ _3.5_
 
 __Task4 :__
 _4.4_
-- The three original features are event-specific and don't create a god object because each feature belongs to the relevant leaf.
+- The three original features are event-specific and don't create a good object because each feature belongs to the relevant leaf.
