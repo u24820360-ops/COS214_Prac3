@@ -1,16 +1,36 @@
 #ifndef OBSERVER_H
 #define OBSERVER_H
 
-#include <iostream>
-#include <vector>
-#include <string>
+#include "Subject.h"
 
-class Observer {
-private:
-
+/**
+ * @class Observer
+ * @brief Observer interface for concrete observer with a subject to observe
+ * @note GoF design pattern: Observer -> Participation: Observer
+ */
+class Observer
+{
 public:
-    Observer();
-    virtual ~Observer();
+	/**
+	 * @brief Handle memory dynamic management for Observer class
+	 */
+	virtual ~Observer() {}
+	/**
+	 * 
+	 * @brief update the observer when the subject changes
+	 * @return void
+	 */
+	virtual void update() = 0;
+	
+	/**
+	 * @brief set observers subject to null
+	 * @return void
+	 */
+	virtual void detach() = 0;
+	
+	
+protected:
+	Observer();
 };
 
 #endif // OBSERVER_H

@@ -1,16 +1,20 @@
 #ifndef NOTIFICATION_H
 #define NOTIFICATION_H
 
-#include <iostream>
-#include <vector>
-#include <string>
+enum class Notification 
+{
+	UNDEFINED,
+	OPEN,
+	CLOSE,
+	WEATHER_ALERT,
+	SCHEDULE_CHANGE,
+	CAPACITY_ALERT,
+	SECURITY_ALERT,
 
-class Notification {
-private:
-
-public:
-    Notification();
-    virtual ~Notification();
+	//Task4 updates:
+	LOST_CHILD_ALERT,
+	LOW_STOCK_ALERT,
+	VIP_MODE
 };
 
 #endif // NOTIFICATION_H

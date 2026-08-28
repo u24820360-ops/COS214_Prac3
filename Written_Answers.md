@@ -58,6 +58,7 @@ Quest Music Festival
 ```
 
 _1.2_
+
 -    Subject: Subject, Observer: Observer, ConcreteSubject: EventControl, ConcreteObserver: EventComponent, EventUnit and its subclasses; FoodTruck, SecurityTeam, MainStage, Playground, CleanerTeam, ToiletStall, EntranceGate, CaretakerTeam, EventGroup and its subclasses; QuestMusicFestival, MensBathroom, WomensBathroom, EntranceGateArea, KidsArea, MainStageArea, BathroomArea, FoodCourtArea
 -    Component: EventComponent, Composite: EventGroup, Leaf: EventUnit, Client: EventControl
 -    EventComponent participates in both the Observer and the Composite patterns acting as a bridge between them. As a ConcreteObserver in the Observer pattern, EventComponent implements the update operation used to receive pushed notifications from the Subject and allows each concrete component to react according to its own behaviour. It receives pushed notifications that it would need to act accordingly on. As a Component in the Composite pattern, EventComponent provides the common interface for both EventGroup and EventUnit and allows the client to treat individual units and groups uniformly.
@@ -72,4 +73,55 @@ _1.4_
 -    (e)The EventControl and EventComponent classes are part of both the Observer and Composite patterns. This is not a misuse of either pattern in both cases. The EventControl as the ConcreteSubject in the Observer pattern implements functionality to store objects that are observing it and sends update notifications to these objects. As a Client in the Composite pattern, it manipulates the objects that comprise the part-whole composite structure. The EventComponent, as the ConcreteObserver in the Observer pattern, implements the update operation used to receive pushed notifications and responds according to its concrete implementation. As a Component it provides the interface with which the client uses.
 
 
-__Task2 :__
+
+__Task 2: Composite event structure__
+
+_2.1 Completed_
+
+_2.2 Completed_
+
+_2.3 Object Diagram_
+
+_2.4 Memory Management_
+
+- `EventGroup` owns its children. The destructor iterates the `children` vector and `delete`s each child. A leaf destructor releases only that leaf. A nested `EventGroup` destructor repeats the same walk, so deleting the root `questFestival` releases the entire owned subtree. Each node has exactly one owning parent, so each object is deleted exactly once.
+- Transfer rule: a component belongs to at most one composite at a time. To move a child, the old parent calls `remove(child)`, which unlinks the pointer and does not `delete` it; the new parent then calls `add(child)` and becomes the sole owner. `add` without a prior `remove` would leave two owners and cause a double-free when both composites are destroyed. No `delete` is performed during a transfer.
+
+__Task 3: Observer Nnotification sysytem__
+
+_3.1 Observer/Subject_
+
+- `Subject` holds a registration list `vector<Observer*> observers` and exposes `attach, detach and notify`. `EventControl` is the concrete subject.
+- Attach policy: a `nullptr` observer is ignored. If the observer is already in the list, the second registration is ignored so that one observer is never notified twice. Otherwise the observer is appended.
+- Detach policy: a `nullptr` observer, or an observer that is not in the list, is ignored and is not treated as an error. If the observer is present, every matching entry is erased. This keeps `detach` safe to call more than once during shutdown.
+
+
+_3.2_
+
+- `Observer` declares `virtual void update() = 0`. Concrete observing behaviour lives on `EventComponent` and its subclasses: `update` pulls the latest notice from `EventControl` and then calls `determineStatus`, so each leaf reacts according to its own mapping of the Notification update.
+- Lifetime policy: observers detach themselves. When an `EventComponent` is destroyed it calls `subject->detach(this)` if it still has a subject pointer. The subject does not own observers and must not `delete` them; it only forgets the pointer. That pairing means a destroyed observer cannot remain in the registration list as a dangling pointer. Subjects therefore never notify an object whose lifetime has already ended.
+
+_3.3_
+
+- Ordinary operational change: `OPEN, CLOSE, SCHEDULE_CHANGE`.
+- Capacity-related change: `CAPACITY_ALERT`.
+- Safety-related change: `WEATHER_ALERT, SECURITY_ALERT`.
+- Each leaf maps those notices onto a different status (`Cascade, Open, Closed, Paused, Active, Idle, HighAlert`). 
+
+_3.4_
+
+- `EventGroup` is the Composite-level class that both receives a notice and forwards it downward. When `update` runs on a group, the group pulls the current notice, sets its own status to `Cascade`, and then run `update()` on the observers registered on that group.
+- `EventControl` notifies `questFestival`; `questFestival` cascades to `bathroomArea`; `bathroomArea` cascades to `mensBathroom` and then to `stallM1`. The same path can be read as EventControl → Quest Music Festival → Bathroom Area → Stall. Each level receives the notice from above and notifies interested observers below it. The `Cascade` status records that a group is forwarding rather than applying a leaf-specific open/close state of its own.
+
+_Diagram_
+
+_3.5_
+
+- `Pull` mode: `Subject::notify()` calls `Observer::update()` with no arguments. The observer then queries the subject: `EventComponent::update` calls `subject->getNotification()` and `subject->getCapacity()`, stores those values, and then computes a new `Status` through `determineStatus`.
+- Trade-off: pull keeps the `update` signature stable when extra subject state is added, because each observer requests only the fields it needs. The cost is that every observer must hold a subject pointer and know which getters to call. A push model would pass the notice (and capacity) into `update(...)` directly, which is simpler for observers but forces the subject interface to change whenever the payload grows.
+- Exact state transferred by pull: the current `Notification` (`OPEN`, `CLOSE`, `WEATHER_ALERT`, `SCHEDULE_CHANGE`, `CAPACITY_ALERT` or `SECURITY_ALERT`) and the integer `capacity`. `EventControl` uses occupancy internally to decide when to emit `CAPACITY_ALERT`; `EntranceGate` also reads capacity/occupancy for display after the pull.
+
+
+__Task4 :__
+_4.4_
+- The three original features are event-specific and don't create a god object because each feature belongs to the relevant leaf.

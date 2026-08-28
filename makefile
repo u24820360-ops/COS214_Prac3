@@ -3,7 +3,7 @@ FLAGS= -g -std=c++11 -Werror -Wall -Iinclude -Isrc
 CXX = g++
 OBJ_DIR=obj
 
-OBJECTS=(saba)
+OBJECTS=()
 
 all : $(TARGET)
 

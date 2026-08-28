@@ -1,16 +1,22 @@
 #ifndef STATUS_H
 #define STATUS_H
 
-#include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
+#include <iostream>
 
-class Status {
-private:
-
+/**
+ * @class Status
+ * - manages the status of the EventComponent object
+ */
+class Status
+{
 public:
-    Status();
-    virtual ~Status();
+/**
+ * @brief return different message depending on the state of event component
+ * @return string
+ */
+	virtual std::string getMessage()=0;
 };
 
-#endif // STATUS_H
+#endif
