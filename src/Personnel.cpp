@@ -13,8 +13,9 @@ void Personnel::addPersonnel(string personnel) { this->personnel.push_back(perso
 
 void Personnel::display(string indent) 
 {
-	cout << this->name << endl
-	<< "Personnel List: " << endl;
+	cout << indent << "[L] " <<this->name << endl
+	<< indent << "[Status] " <<(this->status ? this->status->getMessage() :"null") << endl
+	<< indent << "Personnel List: " << endl;
 	
 	auto iterator=this->personnel.begin();
 	while(iterator != this->personnel.end()) 

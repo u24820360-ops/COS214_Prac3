@@ -47,6 +47,7 @@ void EventGroup::add(EventComponent *child)
 
 void EventGroup::update() 
 {
+	cout << "[C]: " << this->name << endl;
 	auto iterator=this->children.begin();
 	while(iterator != this->children.end()) 
 	{
@@ -72,17 +73,17 @@ void EventGroup::remove(EventComponent *target)
 
 void EventGroup::display(string indent)
 {
-	cout << this->name << endl
-		 << "\t" << this->status << endl;
-
+	cout << indent << "G: " << this->name << endl
+		 << indent << (status? this->status->getMessage() : "null") << endl;
+	cout << "++++ Child Items +++" << endl;
 	auto iterator = this->children.begin();
-	int list = 1;
 	while (iterator != this->children.end())
 	{
-		cout << "[" << list++ << "] ";
-		(*iterator)->display("\t");
+		(*iterator)->display(indent + "\t");
 		++iterator;
 	}
+	cout << "+++++++++++" << endl;
+	
 }
 
 vector<EventComponent *> EventGroup::getChildren()
