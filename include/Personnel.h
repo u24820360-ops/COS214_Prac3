@@ -40,7 +40,7 @@ public:
 	
 	void display(std::string indent="");
 	
-	virtual void setStatus(Notification notification)=0;
+	virtual Status* determineStatus(Notification notification)=0;
 
 protected:
 	/**

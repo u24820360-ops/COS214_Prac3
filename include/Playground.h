@@ -14,8 +14,8 @@
 
 /**
  * @class Playground
- * @brief Concrete EventUnit (Leaf)
- * -inherits from EventUnit
+ * @brief Concrete EventComponent (Leaf)
+ * -inherits from EventComponent
  */
 class Playground : public EventComponent
 {

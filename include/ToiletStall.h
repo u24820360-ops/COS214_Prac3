@@ -13,7 +13,7 @@
 
 /**
  * @class ToiletStall
- * -inherits from EventUnit
+ * -inherits from EventComponent
  * -Concrete leaf in Composite GoF Design Pattern
  */
 class ToiletStall: public EventComponent {
@@ -23,7 +23,6 @@ public:
 	ToiletStall(std::string name);
 	virtual ~ToiletStall() {};
 	Status* determineStatus(Notification notification);
-	void display(std::string indent="");
 	
 private:
 ToiletStall();

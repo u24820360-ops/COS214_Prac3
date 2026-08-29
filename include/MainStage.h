@@ -13,7 +13,7 @@
 /**
  * @class MainStage
  * @brief ConcreteLeaf in GoF Composite Design Pattern
- * -inherits from EventUnit
+ * -inherits from EventComponent
  */
 class MainStage : public EventComponent
 {

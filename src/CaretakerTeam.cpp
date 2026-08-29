@@ -22,7 +22,3 @@ Status *CaretakerTeam::determineStatus(Notification notification)
 		return this->status;
 	}
 }
-
-void CaretakerTeam::setStatus(Notification notification) {
-	this->status = determineStatus(notification);
-}

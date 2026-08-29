@@ -16,7 +16,3 @@ Status *ToiletStall::determineStatus(Notification notification)
 		return this->status;
 	}
 }
-
-void ToiletStall::display(string indent) {
-	//
-}

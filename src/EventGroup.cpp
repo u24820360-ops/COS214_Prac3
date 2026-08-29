@@ -48,6 +48,7 @@ void EventGroup::add(EventComponent *child)
 void EventGroup::update() 
 {
 	cout << "[C]: " << this->name << endl;
+	cout << "[Satus] " << (this->status? this->status->getMessage() : "null");
 	auto iterator=this->children.begin();
 	while(iterator != this->children.end()) 
 	{
@@ -74,15 +75,13 @@ void EventGroup::remove(EventComponent *target)
 void EventGroup::display(string indent)
 {
 	cout << indent << "G: " << this->name << endl
-		 << indent << (status? this->status->getMessage() : "null") << endl;
-	cout << "++++ Child Items +++" << endl;
+		 << indent << "[Status] " << (status? this->status->getMessage() : "null") << endl;
 	auto iterator = this->children.begin();
 	while (iterator != this->children.end())
 	{
 		(*iterator)->display(indent + "\t");
 		++iterator;
 	}
-	cout << "+++++++++++" << endl;
 	
 }
 

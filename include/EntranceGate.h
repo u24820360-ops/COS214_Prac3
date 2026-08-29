@@ -13,7 +13,7 @@
 
 /**
  * @class EntranceGate
- * - inherits from EventUnit
+ * - inherits from EventComponent
  * @brief Concrete leaf for EventComponent in Composite GoF Design Pattern
  */
 class EntranceGate : public EventComponent {
@@ -27,7 +27,6 @@ public:
 	 * @param name name of the EventComponent
 	 */
 	EntranceGate(std::string name);
-	
 	void display(std::string indent);
 	Status* determineStatus(Notification notification);
 	

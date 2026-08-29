@@ -22,7 +22,3 @@ Status *SecurityTeam::determineStatus(Notification notification)
 		return this->status;
 	}
 }
-
-void SecurityTeam::setStatus(Notification notification) {
-	this->status = determineStatus(notification);
-}

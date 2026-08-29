@@ -14,7 +14,7 @@
 
 /**
  * @class FoodTruck
- * - inherits from EventUnit
+ * - inherits from EventComponent
  * - ConcreteLeaf in Composite GoF Design Pattern
  */
 class FoodTruck : public EventComponent
@@ -29,52 +29,51 @@ public:
 	 */
 	FoodTruck(std::string name, std::vector<std::string> menu);
 	~FoodTruck() {}
-	
+
 	/**
 	 * @brief return the menu
-	 * @return vector<string> List of food being served 
+	 * @return vector<string> List of food being served
 	 */
 	std::vector<std::string> getMenu();
-	
+
 	/**
 	 * @brief set the menu
-	 * @param menu 
+	 * @param menu
 	 * @return void
 	 */
 	void setMenu(std::vector<std::string> menu);
-	
+
 	/**
-	 * @brief add item to the menu 
+	 * @brief add item to the menu
 	 * @param item Name of food to be added to the menu
 	 * @return void
 	 */
 	void updateMenu(std::string item);
-	
-	void display(std::string indent="");
-	
-	Status* determineStatus(Notification notification);
 
-	//Task4 updates:
-/**
- * @brief Retrieve the current food stock level.
- *
- * @return Remaining stock quantity.
- */
+	void display(std::string indent = "");
+
+	Status *determineStatus(Notification notification);
+
+	// Task4 updates:
+	/**
+	 * @brief Retrieve the current food stock level.
+	 * @return int Remaining stock quantity.
+	 */
 	int getStockLevel() const;
-/**
- * @brief Update the available stock level.
- *
- * @param stock New stock quantity.
- */
+	
+	/**
+	 * @brief Update the available stock level.
+	 * @param stock New stock quantity.
+	 */
 	void setStockLevel(int stock);
-/**
- * @brief Determine whether the truck requires restocking.
- *
- * @return true if stock has fallen below the operational threshold.
- */
+	
+	/**
+	 * @brief Determine whether the truck requires restocking.
+	 * @return bool true if stock has fallen below the operational threshold.
+	 */
 	bool needRestock() const;
 
-protected:
+private:
 	FoodTruck();
 
 	/**
@@ -82,11 +81,9 @@ protected:
 	 */
 	std::vector<std::string> menu;
 
-//Task4 updates:
-private:
-/**
- * @brief Current quantity of food stock available for service.
- */
+	/**
+	 * @brief Current quantity of food stock available for service.
+	 */
 	int stockLevel;
 };
 

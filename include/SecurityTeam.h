@@ -14,14 +14,13 @@
 
 /**
  * @class SecurityTeam
- * @brief Concrete EventUnit/Personnel 
+ * @brief Concrete EventComponent/Personnel 
  */
 class SecurityTeam: public Personnel {
 public:
 	SecurityTeam(std::string name);
 	virtual ~SecurityTeam() {}
 	Status* determineStatus(Notification notification);
-	virtual void setStatus(Notification notification);
 	
 	private: 
 	SecurityTeam();

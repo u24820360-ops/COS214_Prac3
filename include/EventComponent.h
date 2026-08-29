@@ -102,7 +102,7 @@ public:
 	 * @param subject new subject
 	 * @return void
 	 */
-	void setSubject(EventControl *subject);
+	virtual void setSubject(EventControl *subject);
 	
 	void detach();
 

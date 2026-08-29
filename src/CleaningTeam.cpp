@@ -21,7 +21,3 @@ Status *CleaningTeam::determineStatus(Notification notification)
 		return this->status;
 	}
 }
-
-void CleaningTeam::setStatus(Notification notification) {
-	this->status = determineStatus(notification);
-}
