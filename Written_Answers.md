@@ -120,8 +120,6 @@ _3.4 Composite level class_
 - `EventGroup` is the Composite-level class that both receives a notice and forwards it downward. When `update` runs on a group, the group pulls the current notice, sets its own status to `Cascade`, and then run `update()` on the observers registered on that group.
 - `EventControl` notifies `questFestival`; `questFestival` cascades to `bathroomArea`; `bathroomArea` cascades to `mensBathroom` and then to `stallM1`. The same path can be read as EventControl → Quest Music Festival → Bathroom Area → Stall. Each level receives the notice from above and notifies interested observers below it. The `Cascade` status records that a group is forwarding rather than applying a leaf-specific open/close state of its own.
 
-_Diagram_
-
 _3.5 pull vs push model_
 
 - `Pull` mode: `Subject::notify()` calls `Observer::update()` with no arguments. The observer then queries the subject: `EventComponent::update` calls `subject->getNotification()` and `subject->getCapacity()`, stores those values, and then computes a new `Status` through `determineStatus`.
