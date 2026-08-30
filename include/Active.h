@@ -7,6 +7,11 @@
 
 #include "Status.h"
 
+/**
+ * @class Active
+ * @brief Represents the Active state for the event component
+ */
+
 class Active : public Status
 {
 public:

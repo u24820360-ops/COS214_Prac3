@@ -21,6 +21,10 @@ class Playground : public EventComponent
 {
 public:
 	virtual ~Playground() {}
+	/**
+	 * @brief Constructs a Playground
+	 * @param name name of the Playground
+	 */
 	Playground(std::string name);
 	Status *determineStatus(Notification notification);	
 private:

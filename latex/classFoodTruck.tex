@@ -1,0 +1,258 @@
+\doxysection{Food\+Truck Class Reference}
+\hypertarget{classFoodTruck}{}\label{classFoodTruck}\index{FoodTruck@{FoodTruck}}
+
+
+{\ttfamily \#include $<$Food\+Truck.\+h$>$}
+
+
+
+Inheritance diagram for Food\+Truck\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classFoodTruck__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Food\+Truck\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classFoodTruck__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFoodTruck_a757c2e2bd798724bb0e3fbc314fbb277}{Food\+Truck}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}}, std\+::vector$<$ std\+::string $>$ menu)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classFoodTruck_a27c9086b81c91e88e2c030de805fd283}{get\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em return the menu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFoodTruck_abcc59f534e5a91fbf506373c628df121}{set\+Menu}} (std\+::vector$<$ std\+::string $>$ menu)
+\begin{DoxyCompactList}\small\item\em set the menu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFoodTruck_a092dfb56dce6e53ef598a553ece3f426}{update\+Menu}} (std\+::string item)
+\begin{DoxyCompactList}\small\item\em add item to the menu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFoodTruck_a8449f0e6b66b17bee0a095d1398c9488}{display}} (std\+::string indent="{}"{})
+\begin{DoxyCompactList}\small\item\em print information for \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFoodTruck_a547df9e31dbce41ea4ee7a7c95f67b33}{determine\+Status}} (Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}})
+\begin{DoxyCompactList}\small\item\em Determine the appropriate next state base on notification. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFoodTruck_a7e5f35b57c82c1c466c7706360b94b81}{get\+Stock\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the current food stock level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFoodTruck_a269d0a996f24962e32be060f8a807570}{set\+Stock\+Level}} (int stock)
+\begin{DoxyCompactList}\small\item\em Update the available stock level. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFoodTruck_aa5fa2aad156301ef3714e6696b810206}{need\+Restock}} () const
+\begin{DoxyCompactList}\small\item\em Determine whether the truck requires restocking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c}{Event\+Component}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor\+: create instance of of event class. note that you cannot instantiate object of abstract class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_acab8752f6c559f56d92ab6826641b603}{add}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em add \doxylink{classEventComponent}{Event\+Component} to children vector in \doxylink{classEventGroup}{Event\+Group} for composite event type \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619}{remove}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}target)
+\begin{DoxyCompactList}\small\item\em remove target \doxylink{classEventComponent}{Event\+Component} from children list \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}{update}} ()
+\begin{DoxyCompactList}\small\item\em update the observer when the subject changes \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em return name of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425}{get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em return vector of children Event\+Components \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97}{set\+Name}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em update \doxylink{classEventComponent}{Event\+Component} name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em return status of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8}{set\+Status}} (\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}})
+\begin{DoxyCompactList}\small\item\em set status to new passed in status \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99}{set\+Subject}} (\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}})
+\begin{DoxyCompactList}\small\item\em set \doxylink{classSubject}{Subject} to passed in subject parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_aff9321cf604668d33a36dc518e75ea68}{detach}} ()
+\begin{DoxyCompactList}\small\item\em set observers subject to null \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Handle memory dynamic management for \doxylink{classObserver}{Observer} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*} {\bfseries subject}
+\begin{DoxyCompactList}\small\item\em subject being observed \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}}
+\item 
+Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}}
+\item 
+int \mbox{\hyperlink{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b}{capacity}}
+\item 
+int \mbox{\hyperlink{classEventComponent_a7eca56827bb8db6fc43e32108468dce0}{occupancy}}
+\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+\begin{DoxyItemize}
+\item inherits from \doxylink{classEventComponent}{Event\+Component}
+\item Concrete\+Leaf in Composite GoF Design Pattern 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFoodTruck_a757c2e2bd798724bb0e3fbc314fbb277}\label{classFoodTruck_a757c2e2bd798724bb0e3fbc314fbb277} 
+\index{FoodTruck@{FoodTruck}!FoodTruck@{FoodTruck}}
+\index{FoodTruck@{FoodTruck}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{FoodTruck()}{FoodTruck()}}
+{\footnotesize\ttfamily Food\+Truck\+::\+Food\+Truck (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::vector$<$ std\+::string $>$}]{menu }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyItemize}
+\item create instance of \doxylink{classFoodTruck}{Food\+Truck} 
+\begin{DoxyParams}{Parameters}
+{\em menu} & List of food that is being served \\
+\hline
+{\em name} & identifier name for the truck \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFoodTruck_a547df9e31dbce41ea4ee7a7c95f67b33}\label{classFoodTruck_a547df9e31dbce41ea4ee7a7c95f67b33} 
+\index{FoodTruck@{FoodTruck}!determineStatus@{determineStatus}}
+\index{determineStatus@{determineStatus}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{determineStatus()}{determineStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} Food\+Truck\+::determine\+Status (\begin{DoxyParamCaption}\item[{Notification}]{notification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determine the appropriate next state base on notification. 
+
+
+\begin{DoxyItemize}
+\item always returns \doxylink{classCascade}{Cascade} for \doxylink{classEventGroup}{Event\+Group} since it\textquotesingle{}s status is a combination of the childrens status 
+\begin{DoxyParams}{Parameters}
+{\em notification} & Notification from subject \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status\texorpdfstring{$\ast$}{*} new status 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_a8f6abbfa42f6099d22bb1744033625ce}{Event\+Component}}.
+
+\Hypertarget{classFoodTruck_a8449f0e6b66b17bee0a095d1398c9488}\label{classFoodTruck_a8449f0e6b66b17bee0a095d1398c9488} 
+\index{FoodTruck@{FoodTruck}!display@{display}}
+\index{display@{display}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Food\+Truck\+::display (\begin{DoxyParamCaption}\item[{std\+::string}]{indent = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+print information for \doxylink{classEventComponent}{Event\+Component} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & Level of indention for nested components \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_ab11db61d52700ea4235be567646104f9}{Event\+Component}}.
+
+\Hypertarget{classFoodTruck_a27c9086b81c91e88e2c030de805fd283}\label{classFoodTruck_a27c9086b81c91e88e2c030de805fd283} 
+\index{FoodTruck@{FoodTruck}!getMenu@{getMenu}}
+\index{getMenu@{getMenu}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{getMenu()}{getMenu()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Food\+Truck\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return the menu 
+
+\begin{DoxyReturn}{Returns}
+vector$<$string$>$ List of food being served 
+\end{DoxyReturn}
+\Hypertarget{classFoodTruck_a7e5f35b57c82c1c466c7706360b94b81}\label{classFoodTruck_a7e5f35b57c82c1c466c7706360b94b81} 
+\index{FoodTruck@{FoodTruck}!getStockLevel@{getStockLevel}}
+\index{getStockLevel@{getStockLevel}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{getStockLevel()}{getStockLevel()}}
+{\footnotesize\ttfamily int Food\+Truck\+::get\+Stock\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieve the current food stock level. 
+
+\begin{DoxyReturn}{Returns}
+int Remaining stock quantity. 
+\end{DoxyReturn}
+\Hypertarget{classFoodTruck_aa5fa2aad156301ef3714e6696b810206}\label{classFoodTruck_aa5fa2aad156301ef3714e6696b810206} 
+\index{FoodTruck@{FoodTruck}!needRestock@{needRestock}}
+\index{needRestock@{needRestock}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{needRestock()}{needRestock()}}
+{\footnotesize\ttfamily bool Food\+Truck\+::need\+Restock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Determine whether the truck requires restocking. 
+
+\begin{DoxyReturn}{Returns}
+bool true if stock has fallen below the operational threshold. 
+\end{DoxyReturn}
+\Hypertarget{classFoodTruck_abcc59f534e5a91fbf506373c628df121}\label{classFoodTruck_abcc59f534e5a91fbf506373c628df121} 
+\index{FoodTruck@{FoodTruck}!setMenu@{setMenu}}
+\index{setMenu@{setMenu}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{setMenu()}{setMenu()}}
+{\footnotesize\ttfamily void Food\+Truck\+::set\+Menu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{menu }\end{DoxyParamCaption})}
+
+
+
+set the menu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFoodTruck_a269d0a996f24962e32be060f8a807570}\label{classFoodTruck_a269d0a996f24962e32be060f8a807570} 
+\index{FoodTruck@{FoodTruck}!setStockLevel@{setStockLevel}}
+\index{setStockLevel@{setStockLevel}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{setStockLevel()}{setStockLevel()}}
+{\footnotesize\ttfamily void Food\+Truck\+::set\+Stock\+Level (\begin{DoxyParamCaption}\item[{int}]{stock }\end{DoxyParamCaption})}
+
+
+
+Update the available stock level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stock} & New stock quantity. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFoodTruck_a092dfb56dce6e53ef598a553ece3f426}\label{classFoodTruck_a092dfb56dce6e53ef598a553ece3f426} 
+\index{FoodTruck@{FoodTruck}!updateMenu@{updateMenu}}
+\index{updateMenu@{updateMenu}!FoodTruck@{FoodTruck}}
+\doxysubsubsection{\texorpdfstring{updateMenu()}{updateMenu()}}
+{\footnotesize\ttfamily void Food\+Truck\+::update\+Menu (\begin{DoxyParamCaption}\item[{std\+::string}]{item }\end{DoxyParamCaption})}
+
+
+
+add item to the menu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Name of food to be added to the menu \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Food\+Truck.\+h\item 
+src/Food\+Truck.\+cpp\end{DoxyCompactItemize}

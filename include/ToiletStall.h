@@ -20,6 +20,10 @@ class ToiletStall: public EventComponent {
 private:
 
 public:
+	/**
+	 * @brief Constructs a ToiletStall
+	 * @param name name of the ToiletStall
+	 */
 	ToiletStall(std::string name);
 	virtual ~ToiletStall() {};
 	Status* determineStatus(Notification notification);

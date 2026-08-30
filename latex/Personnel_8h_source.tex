@@ -1,0 +1,42 @@
+\doxysection{Personnel.\+h}
+\hypertarget{Personnel_8h_source}{}\label{Personnel_8h_source}\index{include/Personnel.h@{include/Personnel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PERSONNEL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PERSONNEL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}EventComponent.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPersonnel}{Personnel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventComponent}{EventComponent}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPersonnel_abfc95fb0464135f68b6c5e09cc0dea5c}{\string~Personnel}}()\ \{\}}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classPersonnel_af96b270040edaa82426f4165ced02c38}{getPersonnel}}();}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPersonnel_a57ffbf8e0e2d96941a9dfc6283145c4c}{setPersonnel}}(std::vector<std::string>\ \mbox{\hyperlink{classPersonnel_af32f1888792e3781ac9cc86d88298047}{personnel}});}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPersonnel_ac6fb645e9c8306e800b3aa7a30b04182}{addPersonnel}}(std::string\ \mbox{\hyperlink{classPersonnel_af32f1888792e3781ac9cc86d88298047}{personnel}});}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//functions\ described\ in\ superclass}}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPersonnel_a7e113bfa23fe8b91c37a29dbdac7db70}{display}}(std::string\ indent=\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classStatus}{Status}}*\ \mbox{\hyperlink{classPersonnel_a4f70cca5ab267f1b80b4e04cbafd5ce3}{determineStatus}}(Notification\ \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}})=0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classPersonnel_af32f1888792e3781ac9cc86d88298047}{personnel}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classPersonnel_a1a4b6b230954f420d6a3bb46ca7b30fa}{Personnel}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{classPersonnel}{Personnel}}();}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

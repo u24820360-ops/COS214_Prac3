@@ -1,0 +1,232 @@
+\doxysection{Event\+Group Class Reference}
+\hypertarget{classEventGroup}{}\label{classEventGroup}\index{EventGroup@{EventGroup}}
+
+
+The Composite class.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Group.\+h$>$}
+
+
+
+Inheritance diagram for Event\+Group\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classEventGroup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Event\+Group\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classEventGroup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventGroup_a3116d08596ad468f67dca69c8ec5c4f9}{Event\+Group}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_a4c0f84ecca145a195c118c95507c0701}{add}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em add \doxylink{classEventComponent}{Event\+Component} to children vector in \doxylink{classEventGroup}{Event\+Group} for composite event type \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventGroup_a8d0c4041627cbacda60f7a984945f97a}{update}} ()
+\begin{DoxyCompactList}\small\item\em update the observer when the subject changes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_a76b8259f0d061e1efdd2d4f6f08cb875}{remove}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em remove target \doxylink{classEventComponent}{Event\+Component} from children list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_afa755a36b0473027c82685b852f606ea}{set\+Subject}} (\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}})
+\begin{DoxyCompactList}\small\item\em set \doxylink{classSubject}{Subject} to passed in subject parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_adc2a1bbf732a2df83ebeaada00fa9907}{display}} (std\+::string indent="{}"{})
+\begin{DoxyCompactList}\small\item\em print information for \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classEventGroup_a1925325a556c1626fa0b205d15fec53a}{get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em return vector of children Event\+Components \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c}{Event\+Component}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor\+: create instance of of event class. note that you cannot instantiate object of abstract class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em return name of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97}{set\+Name}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em update \doxylink{classEventComponent}{Event\+Component} name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em return status of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8}{set\+Status}} (\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}})
+\begin{DoxyCompactList}\small\item\em set status to new passed in status \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a8f6abbfa42f6099d22bb1744033625ce}{determine\+Status}} (Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}})
+\begin{DoxyCompactList}\small\item\em Determine the appropriate next state base on notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_aff9321cf604668d33a36dc518e75ea68}{detach}} ()
+\begin{DoxyCompactList}\small\item\em set observers subject to null \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Handle memory dynamic management for \doxylink{classObserver}{Observer} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEventGroup_ab40750a6515cce45cbae5e2099092e38}\label{classEventGroup_ab40750a6515cce45cbae5e2099092e38} 
+std\+::vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries children}
+\begin{DoxyCompactList}\small\item\em Child components contained in this event group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*} {\bfseries subject}
+\begin{DoxyCompactList}\small\item\em subject being observed \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}}
+\item 
+Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}}
+\item 
+int \mbox{\hyperlink{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b}{capacity}}
+\item 
+int \mbox{\hyperlink{classEventComponent_a7eca56827bb8db6fc43e32108468dce0}{occupancy}}
+\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Composite class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEventGroup_a3116d08596ad468f67dca69c8ec5c4f9}\label{classEventGroup_a3116d08596ad468f67dca69c8ec5c4f9} 
+\index{EventGroup@{EventGroup}!EventGroup@{EventGroup}}
+\index{EventGroup@{EventGroup}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{EventGroup()}{EventGroup()}}
+{\footnotesize\ttfamily Event\+Group\+::\+Event\+Group (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of \doxylink{classEventGroup}{Event\+Group} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventGroup_a4c0f84ecca145a195c118c95507c0701}\label{classEventGroup_a4c0f84ecca145a195c118c95507c0701} 
+\index{EventGroup@{EventGroup}!add@{add}}
+\index{add@{add}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Event\+Group\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+add \doxylink{classEventComponent}{Event\+Component} to children vector in \doxylink{classEventGroup}{Event\+Group} for composite event type 
+
+
+\begin{DoxyItemize}
+\item Does nothing for leaf \doxylink{classEventComponent}{Event\+Component} because it does not contain a vector of \doxylink{classEventComponent}{Event\+Component} 
+\begin{DoxyParams}{Parameters}
+{\em child} & \doxylink{classEventComponent}{Event\+Component} to be added to vector of event components for \doxylink{classEventGroup}{Event\+Group} \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_acab8752f6c559f56d92ab6826641b603}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_adc2a1bbf732a2df83ebeaada00fa9907}\label{classEventGroup_adc2a1bbf732a2df83ebeaada00fa9907} 
+\index{EventGroup@{EventGroup}!display@{display}}
+\index{display@{display}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Event\+Group\+::display (\begin{DoxyParamCaption}\item[{std\+::string}]{indent = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+print information for \doxylink{classEventComponent}{Event\+Component} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & Level of indention for nested components \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_ab11db61d52700ea4235be567646104f9}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_a1925325a556c1626fa0b205d15fec53a}\label{classEventGroup_a1925325a556c1626fa0b205d15fec53a} 
+\index{EventGroup@{EventGroup}!getChildren@{getChildren}}
+\index{getChildren@{getChildren}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{getChildren()}{getChildren()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ Event\+Group\+::get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+return vector of children Event\+Components 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Event\+Component\texorpdfstring{$\ast$}{*}$>$ 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_a76b8259f0d061e1efdd2d4f6f08cb875}\label{classEventGroup_a76b8259f0d061e1efdd2d4f6f08cb875} 
+\index{EventGroup@{EventGroup}!remove@{remove}}
+\index{remove@{remove}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Event\+Group\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+remove target \doxylink{classEventComponent}{Event\+Component} from children list 
+
+
+\begin{DoxyItemize}
+\item does nothing for leaf components 
+\begin{DoxyParams}{Parameters}
+{\em target} & the child to be removed from the children list \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_afa755a36b0473027c82685b852f606ea}\label{classEventGroup_afa755a36b0473027c82685b852f606ea} 
+\index{EventGroup@{EventGroup}!setSubject@{setSubject}}
+\index{setSubject@{setSubject}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{setSubject()}{setSubject()}}
+{\footnotesize\ttfamily void Event\+Group\+::set\+Subject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*}}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set \doxylink{classSubject}{Subject} to passed in subject parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & new subject \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_a8d0c4041627cbacda60f7a984945f97a}\label{classEventGroup_a8d0c4041627cbacda60f7a984945f97a} 
+\index{EventGroup@{EventGroup}!update@{update}}
+\index{update@{update}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Event\+Group\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+update the observer when the subject changes 
+
+
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}{Event\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Group.\+h\item 
+src/Event\+Group.\+cpp\end{DoxyCompactItemize}

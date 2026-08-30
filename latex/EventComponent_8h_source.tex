@@ -1,0 +1,70 @@
+\doxysection{Event\+Component.\+h}
+\hypertarget{EventComponent_8h_source}{}\label{EventComponent_8h_source}\index{include/EventComponent.h@{include/EventComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EVENTCOMPONENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EVENTCOMPONENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Subject.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Notification.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Status.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Cascade.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}EventControl.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEventComponent}{EventComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObserver}{Observer}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classEventComponent}{\string~EventComponent}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c}{EventComponent}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_acab8752f6c559f56d92ab6826641b603}{add}}(\mbox{\hyperlink{classEventComponent}{EventComponent}}\ *child)\ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619}{remove}}(\mbox{\hyperlink{classEventComponent}{EventComponent}}\ *target)\ \{\}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ inherited\ from\ observer\ superclass}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}{update}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_ab11db61d52700ea4235be567646104f9}{display}}(std::string\ indent\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ std::string\ \mbox{\hyperlink{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006}{getName}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<EventComponent\ *>\ \mbox{\hyperlink{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425}{getChildren}}()\ \{\ \textcolor{keywordflow}{return}\ \{\};\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97}{setName}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classStatus}{Status}}\ *\mbox{\hyperlink{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205}{getStatus}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8}{setStatus}}(\mbox{\hyperlink{classStatus}{Status}}\ *\mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classStatus}{Status}}\ *\mbox{\hyperlink{classEventComponent_a8f6abbfa42f6099d22bb1744033625ce}{determineStatus}}(Notification\ \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}});}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99}{setSubject}}(\mbox{\hyperlink{classEventControl}{EventControl}}\ *\mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}});}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventComponent_aff9321cf604668d33a36dc518e75ea68}{detach}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{classEventControl}{EventControl}}\ *\mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ \ \ \ \ std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00113\ \ \ \ \ Notification\ \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b}{capacity}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEventComponent_a7eca56827bb8db6fc43e32108468dce0}{occupancy}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classStatus}{Status}}\ *\mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{classEventComponent}{EventComponent}}();}
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

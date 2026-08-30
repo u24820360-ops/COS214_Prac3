@@ -1,0 +1,17 @@
+<map id="Status" name="Status">
+<area shape="rect" id="Node000001" title=" " alt="" coords="295,5,357,31"/>
+<area shape="rect" id="Node000002" href="$classActive.html" title="Represents the Active state for the event component." alt="" coords="5,79,68,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,32,81,81,69,84,68,79,80,76,281,27"/>
+<area shape="rect" id="Node000003" href="$classCascade.html" title="Represents the Cascade state for the event component." alt="" coords="93,79,170,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="283,38,164,81,162,76,281,33"/>
+<area shape="rect" id="Node000004" href="$classClosed.html" title="Represents the Closed state for the event component." alt="" coords="194,79,261,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="301,41,245,81,242,76,298,36"/>
+<area shape="rect" id="Node000005" href="$classHighAlert.html" title="Represents the HighAlert state for the event component." alt="" coords="285,79,367,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="329,44,329,79,323,79,323,44"/>
+<area shape="rect" id="Node000006" href="$classIdle.html" title="Represents the Idle state for the event component." alt="" coords="392,79,439,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="353,37,402,76,399,81,349,41"/>
+<area shape="rect" id="Node000007" href="$classOpen.html" title="Represents the Open state for the event component." alt="" coords="463,79,519,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="366,34,465,76,463,81,364,38"/>
+<area shape="rect" id="Node000008" href="$classPaused.html" title="Represents the Paused state for the event component." alt="" coords="544,79,612,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="371,29,544,78,543,83,370,34"/>
+</map>

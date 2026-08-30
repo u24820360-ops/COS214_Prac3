@@ -1,0 +1,362 @@
+\doxysection{Event\+Component Class Reference}
+\hypertarget{classEventComponent}{}\label{classEventComponent}\index{EventComponent@{EventComponent}}
+
+
+interface describing the behaviour of leaves and composites for the Event\+Flow System inherits from observer class and observes \doxylink{classEventControl}{Event\+Control} in \doxylink{classObserver}{Observer} Pattern  
+
+
+
+
+{\ttfamily \#include $<$Event\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Event\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEventComponent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Event\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classEventComponent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c}{Event\+Component}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor\+: create instance of of event class. note that you cannot instantiate object of abstract class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_acab8752f6c559f56d92ab6826641b603}{add}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em add \doxylink{classEventComponent}{Event\+Component} to children vector in \doxylink{classEventGroup}{Event\+Group} for composite event type \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619}{remove}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}target)
+\begin{DoxyCompactList}\small\item\em remove target \doxylink{classEventComponent}{Event\+Component} from children list \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}{update}} ()
+\begin{DoxyCompactList}\small\item\em update the observer when the subject changes \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_ab11db61d52700ea4235be567646104f9}{display}} (std\+::string indent="{}"{})
+\begin{DoxyCompactList}\small\item\em print information for \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em return name of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425}{get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em return vector of children Event\+Components \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97}{set\+Name}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em update \doxylink{classEventComponent}{Event\+Component} name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em return status of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8}{set\+Status}} (\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}})
+\begin{DoxyCompactList}\small\item\em set status to new passed in status \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a8f6abbfa42f6099d22bb1744033625ce}{determine\+Status}} (Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}})
+\begin{DoxyCompactList}\small\item\em Determine the appropriate next state base on notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99}{set\+Subject}} (\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}})
+\begin{DoxyCompactList}\small\item\em set \doxylink{classSubject}{Subject} to passed in subject parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_aff9321cf604668d33a36dc518e75ea68}{detach}} ()
+\begin{DoxyCompactList}\small\item\em set observers subject to null \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Handle memory dynamic management for \doxylink{classObserver}{Observer} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEventComponent_ad7182586aa6aa684824b73048e002cef}\label{classEventComponent_ad7182586aa6aa684824b73048e002cef} 
+\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*} {\bfseries subject}
+\begin{DoxyCompactList}\small\item\em subject being observed \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}}
+\item 
+Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}}
+\item 
+int \mbox{\hyperlink{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b}{capacity}}
+\item 
+int \mbox{\hyperlink{classEventComponent_a7eca56827bb8db6fc43e32108468dce0}{occupancy}}
+\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+interface describing the behaviour of leaves and composites for the Event\+Flow System inherits from observer class and observes \doxylink{classEventControl}{Event\+Control} in \doxylink{classObserver}{Observer} Pattern 
+
+\begin{DoxyNote}{Note}
+GoF Design Pattern, Participation -\/\texorpdfstring{$>$}{>} Component 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c}\label{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c} 
+\index{EventComponent@{EventComponent}!EventComponent@{EventComponent}}
+\index{EventComponent@{EventComponent}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{EventComponent()}{EventComponent()}}
+{\footnotesize\ttfamily Event\+Component\+::\+Event\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor\+: create instance of of event class. note that you cannot instantiate object of abstract class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & identifier name for given \doxylink{classEventComponent}{Event\+Component} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventComponent_acab8752f6c559f56d92ab6826641b603}\label{classEventComponent_acab8752f6c559f56d92ab6826641b603} 
+\index{EventComponent@{EventComponent}!add@{add}}
+\index{add@{add}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily virtual void Event\+Component\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+add \doxylink{classEventComponent}{Event\+Component} to children vector in \doxylink{classEventGroup}{Event\+Group} for composite event type 
+
+
+\begin{DoxyItemize}
+\item Does nothing for leaf \doxylink{classEventComponent}{Event\+Component} because it does not contain a vector of \doxylink{classEventComponent}{Event\+Component} 
+\begin{DoxyParams}{Parameters}
+{\em child} & \doxylink{classEventComponent}{Event\+Component} to be added to vector of event components for \doxylink{classEventGroup}{Event\+Group} \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{classEventGroup_a4c0f84ecca145a195c118c95507c0701}{Event\+Group}}.
+
+\Hypertarget{classEventComponent_aff9321cf604668d33a36dc518e75ea68}\label{classEventComponent_aff9321cf604668d33a36dc518e75ea68} 
+\index{EventComponent@{EventComponent}!detach@{detach}}
+\index{detach@{detach}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Event\+Component\+::detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set observers subject to null 
+
+
+
+Implements \mbox{\hyperlink{classObserver_abfcf1ccc2dfc05913d577fdf36345a0b}{Observer}}.
+
+\Hypertarget{classEventComponent_a8f6abbfa42f6099d22bb1744033625ce}\label{classEventComponent_a8f6abbfa42f6099d22bb1744033625ce} 
+\index{EventComponent@{EventComponent}!determineStatus@{determineStatus}}
+\index{determineStatus@{determineStatus}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{determineStatus()}{determineStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} Event\+Component\+::determine\+Status (\begin{DoxyParamCaption}\item[{Notification}]{notification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determine the appropriate next state base on notification. 
+
+
+\begin{DoxyItemize}
+\item always returns \doxylink{classCascade}{Cascade} for \doxylink{classEventGroup}{Event\+Group} since it\textquotesingle{}s status is a combination of the childrens status 
+\begin{DoxyParams}{Parameters}
+{\em notification} & Notification from subject \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status\texorpdfstring{$\ast$}{*} new status 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{classCaretakerTeam_ac9759a1d779ffea8d223d0b87f999d6d}{Caretaker\+Team}}, \mbox{\hyperlink{classCleaningTeam_a1b94a67402750693819c65b9e8effc0f}{Cleaning\+Team}}, \mbox{\hyperlink{classEntranceGate_ae93e0591cd37defb6c9a39da551c8abd}{Entrance\+Gate}}, \mbox{\hyperlink{classFoodTruck_a547df9e31dbce41ea4ee7a7c95f67b33}{Food\+Truck}}, \mbox{\hyperlink{classMainStage_afd30b75acfa3f9df546c85ce6293effe}{Main\+Stage}}, \mbox{\hyperlink{classPlayground_a7449f9700070edea20db7f7e5dbc8d31}{Playground}}, \mbox{\hyperlink{classSecurityTeam_ab6358afd657448bce1d2b638f89bf353}{Security\+Team}}, \mbox{\hyperlink{classToiletStall_a531e17faebbbc8e5028bd3a33688eb5d}{Toilet\+Stall}}, and \mbox{\hyperlink{classPersonnel_a4f70cca5ab267f1b80b4e04cbafd5ce3}{Personnel}}.
+
+\Hypertarget{classEventComponent_ab11db61d52700ea4235be567646104f9}\label{classEventComponent_ab11db61d52700ea4235be567646104f9} 
+\index{EventComponent@{EventComponent}!display@{display}}
+\index{display@{display}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Event\+Component\+::display (\begin{DoxyParamCaption}\item[{std\+::string}]{indent = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+print information for \doxylink{classEventComponent}{Event\+Component} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & Level of indention for nested components \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classEntranceGate_af329960d997a39c5405f1bb396a28854}{Entrance\+Gate}}, \mbox{\hyperlink{classEventGroup_adc2a1bbf732a2df83ebeaada00fa9907}{Event\+Group}}, \mbox{\hyperlink{classFoodTruck_a8449f0e6b66b17bee0a095d1398c9488}{Food\+Truck}}, and \mbox{\hyperlink{classPersonnel_a7e113bfa23fe8b91c37a29dbdac7db70}{Personnel}}.
+
+\Hypertarget{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425}\label{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425} 
+\index{EventComponent@{EventComponent}!getChildren@{getChildren}}
+\index{getChildren@{getChildren}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{getChildren()}{getChildren()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ Event\+Component\+::get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+return vector of children Event\+Components 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Event\+Component\texorpdfstring{$\ast$}{*}$>$ 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classEventGroup_a1925325a556c1626fa0b205d15fec53a}{Event\+Group}}.
+
+\Hypertarget{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006}\label{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006} 
+\index{EventComponent@{EventComponent}!getName@{getName}}
+\index{getName@{getName}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Event\+Component\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return name of \doxylink{classEventComponent}{Event\+Component} 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\Hypertarget{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205}\label{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205} 
+\index{EventComponent@{EventComponent}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} Event\+Component\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return status of \doxylink{classEventComponent}{Event\+Component} 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classStatus}{Status} \doxylink{classEventComponent}{Event\+Component} status 
+\end{DoxyReturn}
+\Hypertarget{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619}\label{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619} 
+\index{EventComponent@{EventComponent}!remove@{remove}}
+\index{remove@{remove}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily virtual void Event\+Component\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+remove target \doxylink{classEventComponent}{Event\+Component} from children list 
+
+
+\begin{DoxyItemize}
+\item does nothing for leaf components 
+\begin{DoxyParams}{Parameters}
+{\em target} & the child to be removed from the children list \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{classEventGroup_a76b8259f0d061e1efdd2d4f6f08cb875}{Event\+Group}}.
+
+\Hypertarget{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97}\label{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97} 
+\index{EventComponent@{EventComponent}!setName@{setName}}
+\index{setName@{setName}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Event\+Component\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+update \doxylink{classEventComponent}{Event\+Component} name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & new name \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8}\label{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8} 
+\index{EventComponent@{EventComponent}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Event\+Component\+::set\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*}}]{status }\end{DoxyParamCaption})}
+
+
+
+set status to new passed in status 
+
+
+\begin{DoxyItemize}
+\item sets status based on the notification passed in 
+\begin{DoxyParams}{Parameters}
+{\em status} & new status \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99}\label{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99} 
+\index{EventComponent@{EventComponent}!setSubject@{setSubject}}
+\index{setSubject@{setSubject}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{setSubject()}{setSubject()}}
+{\footnotesize\ttfamily void Event\+Component\+::set\+Subject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*}}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set \doxylink{classSubject}{Subject} to passed in subject parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & new subject \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classEventGroup_afa755a36b0473027c82685b852f606ea}{Event\+Group}}.
+
+\Hypertarget{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}\label{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26} 
+\index{EventComponent@{EventComponent}!update@{update}}
+\index{update@{update}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Event\+Component\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+update the observer when the subject changes 
+
+
+
+Implements \mbox{\hyperlink{classObserver_ac75e4b339faeb3ea6fe0a01bf0b4a215}{Observer}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classEventGroup_a8d0c4041627cbacda60f7a984945f97a}{Event\+Group}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b}\label{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b} 
+\index{EventComponent@{EventComponent}!capacity@{capacity}}
+\index{capacity@{capacity}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily int Event\+Component\+::capacity\hspace{0.3cm}{\ttfamily [protected]}}
+
+Maximum capacity of the component \Hypertarget{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}\label{classEventComponent_a82348aef118d5b35e0962a4f632cbd19} 
+\index{EventComponent@{EventComponent}!name@{name}}
+\index{name@{name}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Event\+Component\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+Name of the component \Hypertarget{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}\label{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5} 
+\index{EventComponent@{EventComponent}!notification@{notification}}
+\index{notification@{notification}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{notification}{notification}}
+{\footnotesize\ttfamily Notification Event\+Component\+::notification\hspace{0.3cm}{\ttfamily [protected]}}
+
+Most recent notification received by the Component \Hypertarget{classEventComponent_a7eca56827bb8db6fc43e32108468dce0}\label{classEventComponent_a7eca56827bb8db6fc43e32108468dce0} 
+\index{EventComponent@{EventComponent}!occupancy@{occupancy}}
+\index{occupancy@{occupancy}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{occupancy}{occupancy}}
+{\footnotesize\ttfamily int Event\+Component\+::occupancy\hspace{0.3cm}{\ttfamily [protected]}}
+
+Current occupancy of the component \Hypertarget{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}\label{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86} 
+\index{EventComponent@{EventComponent}!status@{status}}
+\index{status@{status}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStatus}{Status}}\texorpdfstring{$\ast$}{*} Event\+Component\+::status\hspace{0.3cm}{\ttfamily [protected]}}
+
+Current status of the component 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Component.\+h\item 
+src/Event\+Component.\+cpp\end{DoxyCompactItemize}

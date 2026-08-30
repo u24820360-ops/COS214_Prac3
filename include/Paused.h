@@ -7,6 +7,11 @@
 
 #include "Status.h"
 
+/**
+ * @class Paused
+ * @brief Represents the Paused state for the event component
+ */
+
 class Paused : public Status
 {
 public:

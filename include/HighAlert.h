@@ -7,6 +7,11 @@
 
 #include "Status.h"
 
+/**
+ * @class HighAlert
+ * @brief Represents the HighAlert state for the event component
+ */
+
 class HighAlert : public Status
 {
 public:

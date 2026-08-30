@@ -18,6 +18,10 @@
  */
 class CleaningTeam: public Personnel {
 public:
+	/**
+	 * @brief Constructs a CleaningTeam
+	 * @param name name of the CleaningTeam
+	 */
 	CleaningTeam(std::string name);
 	virtual ~CleaningTeam() {}
 	Status* determineStatus(Notification notification);

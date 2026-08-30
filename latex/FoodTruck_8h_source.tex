@@ -1,0 +1,53 @@
+\doxysection{Food\+Truck.\+h}
+\hypertarget{FoodTruck_8h_source}{}\label{FoodTruck_8h_source}\index{include/FoodTruck.h@{include/FoodTruck.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FOODTRUCK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FOODTRUCK\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}EventComponent.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Status.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Open.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Paused.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Closed.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Notification.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFoodTruck}{FoodTruck}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventComponent}{EventComponent}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classFoodTruck_a757c2e2bd798724bb0e3fbc314fbb277}{FoodTruck}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}},\ std::vector<std::string>\ menu);}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classFoodTruck}{\string~FoodTruck}}()\ \{\}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classFoodTruck_a27c9086b81c91e88e2c030de805fd283}{getMenu}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFoodTruck_abcc59f534e5a91fbf506373c628df121}{setMenu}}(std::vector<std::string>\ menu);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFoodTruck_a092dfb56dce6e53ef598a553ece3f426}{updateMenu}}(std::string\ item);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFoodTruck_a8449f0e6b66b17bee0a095d1398c9488}{display}}(std::string\ indent\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classStatus}{Status}}\ *\mbox{\hyperlink{classFoodTruck_a547df9e31dbce41ea4ee7a7c95f67b33}{determineStatus}}(Notification\ \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Task4\ updates:}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFoodTruck_a7e5f35b57c82c1c466c7706360b94b81}{getStockLevel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFoodTruck_a269d0a996f24962e32be060f8a807570}{setStockLevel}}(\textcolor{keywordtype}{int}\ stock);}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFoodTruck_aa5fa2aad156301ef3714e6696b810206}{needRestock}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{classFoodTruck}{FoodTruck}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ std::vector<std::string>\ menu;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ stockLevel;}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FOODTRUCK\_H}}
+
+\end{DoxyCode}

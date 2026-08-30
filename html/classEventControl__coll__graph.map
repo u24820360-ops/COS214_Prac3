@@ -1,0 +1,5 @@
+<map id="EventControl" name="EventControl">
+<area shape="rect" id="Node000001" title="EventControl for guiding the actions of the different sections/participants in EventFlow." alt="" coords="5,79,112,104"/>
+<area shape="rect" id="Node000002" href="$classSubject.html" title="Subject interface for classes to be observed in the for proper execution of eventflow." alt="" coords="23,5,94,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,44,61,79,56,79,56,44"/>
+</map>

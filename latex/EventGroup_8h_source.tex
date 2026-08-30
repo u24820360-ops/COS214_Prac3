@@ -1,0 +1,40 @@
+\doxysection{Event\+Group.\+h}
+\hypertarget{EventGroup_8h_source}{}\label{EventGroup_8h_source}\index{include/EventGroup.h@{include/EventGroup.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EVENTGROUP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EVENTGROUP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}EventComponent.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Cascade.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Status.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEventGroup}{EventGroup}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventComponent}{EventComponent}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classEventGroup_a3116d08596ad468f67dca69c8ec5c4f9}{EventGroup}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classEventGroup}{\string~EventGroup}}();}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventGroup_a4c0f84ecca145a195c118c95507c0701}{add}}(\mbox{\hyperlink{classEventComponent}{EventComponent}}*\ child);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventGroup_a8d0c4041627cbacda60f7a984945f97a}{update}}();\textcolor{comment}{//update\ all\ the\ children}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventGroup_a76b8259f0d061e1efdd2d4f6f08cb875}{remove}}(\mbox{\hyperlink{classEventComponent}{EventComponent}}*\ child);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventGroup_afa755a36b0473027c82685b852f606ea}{setSubject}}(\mbox{\hyperlink{classEventControl}{EventControl}}*\ \mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}});}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventGroup_adc2a1bbf732a2df83ebeaada00fa9907}{display}}(std::string\ indent=\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<EventComponent*>\ \mbox{\hyperlink{classEventGroup_a1925325a556c1626fa0b205d15fec53a}{getChildren}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ std::vector<EventComponent\ *>\ \mbox{\hyperlink{classEventGroup_ab40750a6515cce45cbae5e2099092e38}{children}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classEventGroup}{EventGroup}}();}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EVENTGROUP\_H}}
+
+\end{DoxyCode}

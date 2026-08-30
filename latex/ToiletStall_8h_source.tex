@@ -1,0 +1,32 @@
+\doxysection{Toilet\+Stall.\+h}
+\hypertarget{ToiletStall_8h_source}{}\label{ToiletStall_8h_source}\index{include/ToiletStall.h@{include/ToiletStall.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TOILETSTALL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TOILETSTALL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Status.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Closed.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Open.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}EventComponent.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Notification.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classToiletStall}{ToiletStall}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventComponent}{EventComponent}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classToiletStall_afaf7aa2886b45ff1fd09938fdd6e144c}{ToiletStall}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classToiletStall}{\string~ToiletStall}}()\ \{\};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classStatus}{Status}}*\ \mbox{\hyperlink{classToiletStall_a531e17faebbbc8e5028bd3a33688eb5d}{determineStatus}}(Notification\ \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}});}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{classToiletStall}{ToiletStall}}();}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TOILETSTALL\_H}}
+
+\end{DoxyCode}

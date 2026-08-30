@@ -39,14 +39,12 @@ public:
 	/**
 	 * @brief set the menu
 	 * @param menu
-	 * @return void
 	 */
 	void setMenu(std::vector<std::string> menu);
 
 	/**
 	 * @brief add item to the menu
 	 * @param item Name of food to be added to the menu
-	 * @return void
 	 */
 	void updateMenu(std::string item);
 
@@ -77,7 +75,7 @@ private:
 	FoodTruck();
 
 	/**
-	 * @brief list of foods being served eg Salvory rice, beef jerky, pork chop, chicken leg #Monastery special
+	 * @brief list of foods being served eg Savoury rice, beef jerky, pork chop, chicken leg #Monastery special
 	 */
 	std::vector<std::string> menu;
 
@@ -87,4 +85,4 @@ private:
 	int stockLevel;
 };
 
-#endif // FOODTRuCK_H
+#endif // FOODTRUCK_H

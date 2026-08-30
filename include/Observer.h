@@ -18,13 +18,11 @@ public:
 	/**
 	 * 
 	 * @brief update the observer when the subject changes
-	 * @return void
 	 */
 	virtual void update() = 0;
 	
 	/**
 	 * @brief set observers subject to null
-	 * @return void
 	 */
 	virtual void detach() = 0;
 	

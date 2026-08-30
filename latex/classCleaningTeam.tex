@@ -1,0 +1,160 @@
+\doxysection{Cleaning\+Team Class Reference}
+\hypertarget{classCleaningTeam}{}\label{classCleaningTeam}\index{CleaningTeam@{CleaningTeam}}
+
+
+Concrete Event\+Component/\+Personnel.  
+
+
+
+
+{\ttfamily \#include $<$Cleaning\+Team.\+h$>$}
+
+
+
+Inheritance diagram for Cleaning\+Team\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classCleaningTeam__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cleaning\+Team\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classCleaningTeam__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCleaningTeam_ada6ae5c3c3e88b3f7a0ee7f7501c9b40}{Cleaning\+Team}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classCleaningTeam}{Cleaning\+Team}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCleaningTeam_a1b94a67402750693819c65b9e8effc0f}{determine\+Status}} (Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}})
+\begin{DoxyCompactList}\small\item\em Determine the appropriate next state base on notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPersonnel}{Personnel}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Personnel} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classPersonnel_af96b270040edaa82426f4165ced02c38}{get\+Personnel}} ()
+\begin{DoxyCompactList}\small\item\em return a vector list of people in personnel team \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPersonnel_a57ffbf8e0e2d96941a9dfc6283145c4c}{set\+Personnel}} (std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classPersonnel_af32f1888792e3781ac9cc86d88298047}{personnel}})
+\begin{DoxyCompactList}\small\item\em set personnel list to passed in parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPersonnel_ac6fb645e9c8306e800b3aa7a30b04182}{add\+Personnel}} (std\+::string \mbox{\hyperlink{classPersonnel_af32f1888792e3781ac9cc86d88298047}{personnel}})
+\begin{DoxyCompactList}\small\item\em add one person to personnel list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPersonnel_a7e113bfa23fe8b91c37a29dbdac7db70}{display}} (std\+::string indent="{}"{})
+\begin{DoxyCompactList}\small\item\em print information for \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c}{Event\+Component}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor\+: create instance of of event class. note that you cannot instantiate object of abstract class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_acab8752f6c559f56d92ab6826641b603}{add}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em add \doxylink{classEventComponent}{Event\+Component} to children vector in \doxylink{classEventGroup}{Event\+Group} for composite event type \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619}{remove}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}target)
+\begin{DoxyCompactList}\small\item\em remove target \doxylink{classEventComponent}{Event\+Component} from children list \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}{update}} ()
+\begin{DoxyCompactList}\small\item\em update the observer when the subject changes \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em return name of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425}{get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em return vector of children Event\+Components \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97}{set\+Name}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em update \doxylink{classEventComponent}{Event\+Component} name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em return status of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8}{set\+Status}} (\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}})
+\begin{DoxyCompactList}\small\item\em set status to new passed in status \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99}{set\+Subject}} (\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}})
+\begin{DoxyCompactList}\small\item\em set \doxylink{classSubject}{Subject} to passed in subject parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_aff9321cf604668d33a36dc518e75ea68}{detach}} ()
+\begin{DoxyCompactList}\small\item\em set observers subject to null \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Handle memory dynamic management for \doxylink{classObserver}{Observer} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classPersonnel}{Personnel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPersonnel_a1a4b6b230954f420d6a3bb46ca7b30fa}{Personnel}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPersonnel}{Personnel}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries personnel}
+\begin{DoxyCompactList}\small\item\em list of names of people working in that team \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*} {\bfseries subject}
+\begin{DoxyCompactList}\small\item\em subject being observed \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}}
+\item 
+Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}}
+\item 
+int \mbox{\hyperlink{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b}{capacity}}
+\item 
+int \mbox{\hyperlink{classEventComponent_a7eca56827bb8db6fc43e32108468dce0}{occupancy}}
+\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Event\+Component/\+Personnel. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCleaningTeam_ada6ae5c3c3e88b3f7a0ee7f7501c9b40}\label{classCleaningTeam_ada6ae5c3c3e88b3f7a0ee7f7501c9b40} 
+\index{CleaningTeam@{CleaningTeam}!CleaningTeam@{CleaningTeam}}
+\index{CleaningTeam@{CleaningTeam}!CleaningTeam@{CleaningTeam}}
+\doxysubsubsection{\texorpdfstring{CleaningTeam()}{CleaningTeam()}}
+{\footnotesize\ttfamily Cleaning\+Team\+::\+Cleaning\+Team (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classCleaningTeam}{Cleaning\+Team}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the \doxylink{classCleaningTeam}{Cleaning\+Team} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCleaningTeam_a1b94a67402750693819c65b9e8effc0f}\label{classCleaningTeam_a1b94a67402750693819c65b9e8effc0f} 
+\index{CleaningTeam@{CleaningTeam}!determineStatus@{determineStatus}}
+\index{determineStatus@{determineStatus}!CleaningTeam@{CleaningTeam}}
+\doxysubsubsection{\texorpdfstring{determineStatus()}{determineStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} Cleaning\+Team\+::determine\+Status (\begin{DoxyParamCaption}\item[{Notification}]{notification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determine the appropriate next state base on notification. 
+
+
+\begin{DoxyItemize}
+\item always returns \doxylink{classCascade}{Cascade} for \doxylink{classEventGroup}{Event\+Group} since it\textquotesingle{}s status is a combination of the childrens status 
+\begin{DoxyParams}{Parameters}
+{\em notification} & Notification from subject \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status\texorpdfstring{$\ast$}{*} new status 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classPersonnel_a4f70cca5ab267f1b80b4e04cbafd5ce3}{Personnel}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Cleaning\+Team.\+h\item 
+src/Cleaning\+Team.\+cpp\end{DoxyCompactItemize}

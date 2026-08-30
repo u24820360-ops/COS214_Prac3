@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classStatus.html" title=" " alt="" coords="5,153,68,179"/>
+<area shape="rect" id="Node000001" href="$classActive.html" title="Represents the Active state for the event component." alt="" coords="126,5,189,31"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="47,140,74,91,93,64,114,40,129,29,132,33,118,44,97,68,79,94,52,142"/>
+<area shape="rect" id="Node000002" href="$classCascade.html" title="Represents the Cascade state for the event component." alt="" coords="119,55,196,80"/>
+<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="57,141,114,89,131,78,134,82,118,93,61,145"/>
+<area shape="rect" id="Node000003" href="$classClosed.html" title="Represents the Closed state for the event component." alt="" coords="124,104,191,129"/>
+<area shape="poly" id="edge14_Node000000_Node000003" title=" " alt="" coords="80,146,124,127,126,132,82,151"/>
+<area shape="rect" id="Node000004" href="$classHighAlert.html" title="Represents the HighAlert state for the event component." alt="" coords="116,153,199,179"/>
+<area shape="poly" id="edge15_Node000000_Node000004" title=" " alt="" coords="82,163,116,163,116,169,82,169"/>
+<area shape="rect" id="Node000005" href="$classIdle.html" title="Represents the Idle state for the event component." alt="" coords="134,203,181,228"/>
+<area shape="poly" id="edge16_Node000000_Node000005" title=" " alt="" coords="82,182,135,204,133,209,80,186"/>
+<area shape="rect" id="Node000006" href="$classOpen.html" title="Represents the Open state for the event component." alt="" coords="129,252,185,277"/>
+<area shape="poly" id="edge17_Node000000_Node000006" title=" " alt="" coords="61,186,118,237,136,250,133,254,114,241,58,190"/>
+<area shape="rect" id="Node000007" href="$classPaused.html" title="Represents the Paused state for the event component." alt="" coords="123,301,191,327"/>
+<area shape="poly" id="edge18_Node000000_Node000007" title=" " alt="" coords="52,190,79,237,118,287,134,299,130,303,114,291,75,240,47,192"/>
+</map>

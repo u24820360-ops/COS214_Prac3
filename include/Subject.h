@@ -20,21 +20,18 @@ public:
 	/**
 	 * @brief Add an observer to the the list of observers observing named subject
 	 * @param observer pointer to an observer that is observing this subject in the observer pattern
-	 * @return void
 	 */
 	void attach(Observer *observer);
 
 	/**
 	 * @brief remove an observer from the list of observer observing the named subject
 	 * @param observer Pointer to an oserver object to be removed
-	 * @return void
 	 */
 	void detach(Observer *observer);
 
 	/**
 	 * @brief loop through the list of observer and update them of the state change
 	 * runs observer->update() for all observers observing the subject
-	 * @return void
 	 */
 	void notify();
 

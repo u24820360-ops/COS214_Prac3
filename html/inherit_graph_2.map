@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classSubject.html" title="Subject interface for classes to be observed in the for proper execution of eventflow." alt="" coords="5,5,76,31"/>
+<area shape="rect" id="Node000001" href="$classEventControl.html" title="EventControl for guiding the actions of the different sections/participants in EventFlow." alt="" coords="124,5,231,31"/>
+<area shape="poly" id="edge19_Node000000_Node000001" title=" " alt="" coords="90,15,124,15,124,21,90,21"/>
+</map>

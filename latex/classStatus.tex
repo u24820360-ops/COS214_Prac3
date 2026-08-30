@@ -1,0 +1,51 @@
+\doxysection{Status Class Reference}
+\hypertarget{classStatus}{}\label{classStatus}\index{Status@{Status}}
+
+
+{\ttfamily \#include $<$Status.\+h$>$}
+
+
+
+Inheritance diagram for Status\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classStatus_ae502fbbc1d53f7e0423913d1fbb13c26}{get\+Message}} ()=0
+\begin{DoxyCompactList}\small\item\em return different message depending on the state of event component \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+\begin{DoxyItemize}
+\item manages the status of the \doxylink{classEventComponent}{Event\+Component} object 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStatus_ae502fbbc1d53f7e0423913d1fbb13c26}\label{classStatus_ae502fbbc1d53f7e0423913d1fbb13c26} 
+\index{Status@{Status}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily virtual std\+::string Status\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+return different message depending on the state of event component 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classActive_a4102665d2ba0a311f8b4e21ec836dd78}{Active}}, \mbox{\hyperlink{classCascade_a02263ad5682a551fd1527357fc687c6c}{Cascade}}, \mbox{\hyperlink{classHighAlert_ae85483d2a8928c383da7908aa6e2ecca}{High\+Alert}}, \mbox{\hyperlink{classIdle_ad911e1c241ba7dc97b97b4fc276213c5}{Idle}}, \mbox{\hyperlink{classOpen_a7d42a0e1944e40be64ec375296e89d29}{Open}}, and \mbox{\hyperlink{classPaused_a348e29e43b3d046eff7e279cf271e005}{Paused}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Status.\+h\end{DoxyCompactItemize}

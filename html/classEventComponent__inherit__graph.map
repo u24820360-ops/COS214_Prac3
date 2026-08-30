@@ -1,0 +1,25 @@
+<map id="EventComponent" name="EventComponent">
+<area shape="rect" id="Node000001" title="interface describing the behaviour of leaves and composites for the EventFlow System inherits from ob..." alt="" coords="353,79,488,104"/>
+<area shape="rect" id="Node000003" href="$classEntranceGate.html" title="Concrete leaf for EventComponent in Composite GoF Design Pattern." alt="" coords="5,152,116,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,109,117,155,116,150,349,104"/>
+<area shape="rect" id="Node000004" href="$classEventGroup.html" title="The Composite class." alt="" coords="141,152,239,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="371,111,228,154,227,149,370,106"/>
+<area shape="rect" id="Node000005" href="$classFoodTruck.html" title=" " alt="" coords="264,152,351,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="392,114,327,154,324,150,389,109"/>
+<area shape="rect" id="Node000006" href="$classMainStage.html" title="ConcreteLeaf in GoF Composite Design Pattern &#45;inherits from EventComponent." alt="" coords="375,152,466,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="423,118,423,152,418,152,418,118"/>
+<area shape="rect" id="Node000007" href="$classPersonnel.html" title="The Base Class for the Personnel teams." alt="" coords="491,152,577,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="452,109,517,150,514,154,449,114"/>
+<area shape="rect" id="Node000011" href="$classPlayground.html" title="Concrete EventComponent (Leaf) &#45;inherits from EventComponent." alt="" coords="601,152,696,177"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="471,106,613,149,611,154,470,111"/>
+<area shape="rect" id="Node000012" href="$classToiletStall.html" title=" " alt="" coords="720,152,807,177"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="490,104,720,152,719,157,488,109"/>
+<area shape="rect" id="Node000002" href="$classObserver.html" title="Observer interface for concrete observer with a subject to observe." alt="" coords="380,5,461,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="423,44,423,79,418,79,418,44"/>
+<area shape="rect" id="Node000008" href="$classCaretakerTeam.html" title="Concrete EventComponent/Personnel." alt="" coords="333,225,453,251"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="501,186,417,227,415,223,498,181"/>
+<area shape="rect" id="Node000009" href="$classCleaningTeam.html" title="Concrete EventComponent/Personnel." alt="" coords="477,225,591,251"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="537,191,537,225,531,225,531,191"/>
+<area shape="rect" id="Node000010" href="$classSecurityTeam.html" title="Concrete EventComponent/Personnel." alt="" coords="616,225,727,251"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="569,181,650,223,648,227,567,186"/>
+</map>

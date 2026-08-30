@@ -1,0 +1,36 @@
+\doxysection{Main\+Stage.\+h}
+\hypertarget{MainStage_8h_source}{}\label{MainStage_8h_source}\index{include/MainStage.h@{include/MainStage.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINSTAGE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINSTAGE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}EventComponent.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Paused.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Closed.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Open.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainStage}{MainStage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventComponent}{EventComponent}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classMainStage_ac180f6f21539280089bdcf1df6fc2709}{MainStage}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMainStage}{\string~MainStage}}()\ \{\}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classStatus}{Status}}*\ \mbox{\hyperlink{classMainStage_afd30b75acfa3f9df546c85ce6293effe}{determineStatus}}(Notification\ \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//Task4\ updates:}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainStage_ab630b60bae772b436cb44cb36af40666}{isVipOnly}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainStage_a9f8eb9afa7acbba3e9f19a538ad4e9f3}{setVipOnly}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classMainStage}{MainStage}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//Task4\ update:}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ vipOnly;}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINSTAGE\_H}}
+
+\end{DoxyCode}

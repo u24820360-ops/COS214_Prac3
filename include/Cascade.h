@@ -7,6 +7,11 @@
 
 #include "Status.h"
 
+/**
+ * @class Cascade
+ * @brief Represents the Cascade state for the event component
+ */
+
 class Cascade : public Status
 {
 public:

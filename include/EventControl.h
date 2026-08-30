@@ -31,7 +31,6 @@ public:
 	/**
 	 * @brief set EventControl notification to passed in notification
 	 * @param notification new notification
-	 * @return void
 	 */
 	void updateNotification(Notification notification);
 	
@@ -43,8 +42,7 @@ public:
 	
 	/**
 	 * @brief set the capacity of EventControl
-	 * @param capcity new capacity
-	 * @return void
+	 * @param capacity new capacity
 	 */
 	void setCapacity(int capacity);
 	
@@ -52,7 +50,6 @@ public:
 	 * @brief admit named number of people into event
 	 * increment occupancy by that number of people
 	 * @param people count of people being admitted into the event
-	 * @return void
 	 */
 	void admit(int people);
 	
@@ -60,7 +57,6 @@ public:
 	 * @brief remove people from the event
 	 * - reduce occupancy byt the number of people leaving event
 	 * @param people Number of people leaving the event
-	 * @return void 
 	 */
 	void leaveEvent(int people);
 

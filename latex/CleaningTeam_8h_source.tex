@@ -1,0 +1,31 @@
+\doxysection{Cleaning\+Team.\+h}
+\hypertarget{CleaningTeam_8h_source}{}\label{CleaningTeam_8h_source}\index{include/CleaningTeam.h@{include/CleaningTeam.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CLEANINGTEAM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CLEANINGTEAM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Status.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Active.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Idle.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}HighAlert.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Notification.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Personnel.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCleaningTeam}{CleaningTeam}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPersonnel}{Personnel}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classCleaningTeam_ada6ae5c3c3e88b3f7a0ee7f7501c9b40}{CleaningTeam}}(std::string\ \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCleaningTeam}{\string~CleaningTeam}}()\ \{\}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classStatus}{Status}}*\ \mbox{\hyperlink{classCleaningTeam_a1b94a67402750693819c65b9e8effc0f}{determineStatus}}(Notification\ \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}});}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classCleaningTeam}{CleaningTeam}}();}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CLEANINGTEAM\_H}}
+
+\end{DoxyCode}

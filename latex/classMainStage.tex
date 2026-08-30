@@ -1,0 +1,175 @@
+\doxysection{Main\+Stage Class Reference}
+\hypertarget{classMainStage}{}\label{classMainStage}\index{MainStage@{MainStage}}
+
+
+Concrete\+Leaf in GoF Composite Design Pattern -\/inherits from \doxylink{classEventComponent}{Event\+Component}.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Stage.\+h$>$}
+
+
+
+Inheritance diagram for Main\+Stage\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classMainStage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Stage\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classMainStage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainStage_ac180f6f21539280089bdcf1df6fc2709}{Main\+Stage}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainStage_afd30b75acfa3f9df546c85ce6293effe}{determine\+Status}} (Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}})
+\begin{DoxyCompactList}\small\item\em Determine the appropriate next state base on notification. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMainStage_ab630b60bae772b436cb44cb36af40666}{is\+Vip\+Only}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the stage is currently restricted to VIP attendees. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainStage_a9f8eb9afa7acbba3e9f19a538ad4e9f3}{set\+Vip\+Only}} (bool value)
+\begin{DoxyCompactList}\small\item\em Enable or disable VIP-\/only access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a97dd44f877c09ea9572e6461a9475f2c}{Event\+Component}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor\+: create instance of of event class. note that you cannot instantiate object of abstract class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_acab8752f6c559f56d92ab6826641b603}{add}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em add \doxylink{classEventComponent}{Event\+Component} to children vector in \doxylink{classEventGroup}{Event\+Group} for composite event type \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_ad1d6e9ad8ffc98458cb43c64cd921619}{remove}} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}target)
+\begin{DoxyCompactList}\small\item\em remove target \doxylink{classEventComponent}{Event\+Component} from children list \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}{update}} ()
+\begin{DoxyCompactList}\small\item\em update the observer when the subject changes \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_ab11db61d52700ea4235be567646104f9}{display}} (std\+::string indent="{}"{})
+\begin{DoxyCompactList}\small\item\em print information for \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a5fa400bce797046fe6a284eb8e9fb006}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em return name of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classEventComponent_a5aac432f67cd74fb2ebd22f3b8ab1425}{get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em return vector of children Event\+Components \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_a227650c9c0fac91cf47d8657eaed2e97}{set\+Name}} (std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}})
+\begin{DoxyCompactList}\small\item\em update \doxylink{classEventComponent}{Event\+Component} name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a02f3180ab1e88a9522ccb748daa9e205}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em return status of \doxylink{classEventComponent}{Event\+Component} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_ace08b9b65b68a55538a9414f5cca21b8}{set\+Status}} (\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}})
+\begin{DoxyCompactList}\small\item\em set status to new passed in status \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_aba1865dd3c666ea1bcf76f95162d7a99}{set\+Subject}} (\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEventComponent_ad7182586aa6aa684824b73048e002cef}{subject}})
+\begin{DoxyCompactList}\small\item\em set \doxylink{classSubject}{Subject} to passed in subject parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventComponent_aff9321cf604668d33a36dc518e75ea68}{detach}} ()
+\begin{DoxyCompactList}\small\item\em set observers subject to null \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Handle memory dynamic management for \doxylink{classObserver}{Observer} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventControl}{Event\+Control}} \texorpdfstring{$\ast$}{*} {\bfseries subject}
+\begin{DoxyCompactList}\small\item\em subject being observed \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}{name}}
+\item 
+Notification \mbox{\hyperlink{classEventComponent_ac2bf7587ec9605eed8a8a4c529c4edd5}{notification}}
+\item 
+int \mbox{\hyperlink{classEventComponent_ae4b041c98bc58d53783231ae2e8f626b}{capacity}}
+\item 
+int \mbox{\hyperlink{classEventComponent_a7eca56827bb8db6fc43e32108468dce0}{occupancy}}
+\item 
+\mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEventComponent_a78b3a611fd93c266928e1af07fa7cf86}{status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete\+Leaf in GoF Composite Design Pattern -\/inherits from \doxylink{classEventComponent}{Event\+Component}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMainStage_ac180f6f21539280089bdcf1df6fc2709}\label{classMainStage_ac180f6f21539280089bdcf1df6fc2709} 
+\index{MainStage@{MainStage}!MainStage@{MainStage}}
+\index{MainStage@{MainStage}!MainStage@{MainStage}}
+\doxysubsubsection{\texorpdfstring{MainStage()}{MainStage()}}
+{\footnotesize\ttfamily Main\+Stage\+::\+Main\+Stage (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of stage \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMainStage_afd30b75acfa3f9df546c85ce6293effe}\label{classMainStage_afd30b75acfa3f9df546c85ce6293effe} 
+\index{MainStage@{MainStage}!determineStatus@{determineStatus}}
+\index{determineStatus@{determineStatus}!MainStage@{MainStage}}
+\doxysubsubsection{\texorpdfstring{determineStatus()}{determineStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStatus}{Status}} \texorpdfstring{$\ast$}{*} Main\+Stage\+::determine\+Status (\begin{DoxyParamCaption}\item[{Notification}]{notification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determine the appropriate next state base on notification. 
+
+
+\begin{DoxyItemize}
+\item always returns \doxylink{classCascade}{Cascade} for \doxylink{classEventGroup}{Event\+Group} since it\textquotesingle{}s status is a combination of the childrens status 
+\begin{DoxyParams}{Parameters}
+{\em notification} & Notification from subject \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status\texorpdfstring{$\ast$}{*} new status 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classEventComponent_a8f6abbfa42f6099d22bb1744033625ce}{Event\+Component}}.
+
+\Hypertarget{classMainStage_ab630b60bae772b436cb44cb36af40666}\label{classMainStage_ab630b60bae772b436cb44cb36af40666} 
+\index{MainStage@{MainStage}!isVipOnly@{isVipOnly}}
+\index{isVipOnly@{isVipOnly}!MainStage@{MainStage}}
+\doxysubsubsection{\texorpdfstring{isVipOnly()}{isVipOnly()}}
+{\footnotesize\ttfamily bool Main\+Stage\+::is\+Vip\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check whether the stage is currently restricted to VIP attendees. 
+
+VIP mode may be enabled during overcrowding or special performances.
+
+\begin{DoxyReturn}{Returns}
+true if VIP-\/only access is active. 
+\end{DoxyReturn}
+\Hypertarget{classMainStage_a9f8eb9afa7acbba3e9f19a538ad4e9f3}\label{classMainStage_a9f8eb9afa7acbba3e9f19a538ad4e9f3} 
+\index{MainStage@{MainStage}!setVipOnly@{setVipOnly}}
+\index{setVipOnly@{setVipOnly}!MainStage@{MainStage}}
+\doxysubsubsection{\texorpdfstring{setVipOnly()}{setVipOnly()}}
+{\footnotesize\ttfamily void Main\+Stage\+::set\+Vip\+Only (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Enable or disable VIP-\/only access. 
+
+Used as an event-\/specific feature for crowd management.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New VIP access state. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Main\+Stage.\+h\item 
+src/Main\+Stage.\+cpp\end{DoxyCompactItemize}

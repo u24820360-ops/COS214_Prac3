@@ -1,0 +1,179 @@
+\doxysection{Event\+Control Class Reference}
+\hypertarget{classEventControl}{}\label{classEventControl}\index{EventControl@{EventControl}}
+
+
+\doxylink{classEventControl}{Event\+Control} for guiding the actions of the different sections/participants in Event\+Flow.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Control.\+h$>$}
+
+
+
+Inheritance diagram for Event\+Control\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classEventControl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Event\+Control\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classEventControl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventControl_a108144a6515659d4609c4ffbe33b71f9}{Event\+Control}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor\+: create instance of \doxylink{classEventControl}{Event\+Control}. \end{DoxyCompactList}\item 
+Notification \mbox{\hyperlink{classEventControl_afe3d16e190e88231f1218fb51a3aacd0}{get\+Notification}} ()
+\begin{DoxyCompactList}\small\item\em return notification for givent \doxylink{classEventControl}{Event\+Control} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventControl_a4cc86daf831b83770dbd7879950659fa}{update\+Notification}} (Notification notification)
+\begin{DoxyCompactList}\small\item\em set \doxylink{classEventControl}{Event\+Control} notification to passed in notification \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventControl_a28fab454ba155ad1c6947c0e1d8a3b34}{get\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em return the capacity of \doxylink{classEventControl}{Event\+Control} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventControl_a38d4b1d5bbaedba5dfc7ffb9728d2a7e}{set\+Capacity}} (int capacity)
+\begin{DoxyCompactList}\small\item\em set the capacity of \doxylink{classEventControl}{Event\+Control} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventControl_a081fadf2c66dda120d7354ef657c54b6}{admit}} (int people)
+\begin{DoxyCompactList}\small\item\em admit named number of people into event increment occupancy by that number of people \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventControl_a0c72fd07edebbed9193d440f52ec9091}{leave\+Event}} (int people)
+\begin{DoxyCompactList}\small\item\em remove people from the event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSubject_a0884bfe374d352c6488a1e40c84246c8}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Add an observer to the the list of observers observing named subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSubject_a752a7596d52ab986539232f8377ca92c}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em remove an observer from the list of observer observing the named subject \end{DoxyCompactList}\item 
+void {\bfseries notify} ()
+\begin{DoxyCompactList}\small\item\em loop through the list of observer and update them of the state change runs observer-\/\texorpdfstring{$>$}{>}update() for all observers observing the subject \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classEventControl}{Event\+Control} for guiding the actions of the different sections/participants in Event\+Flow. 
+
+\begin{DoxyNote}{Note}
+Concrete\+Subject in observer design pattern 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEventControl_a108144a6515659d4609c4ffbe33b71f9}\label{classEventControl_a108144a6515659d4609c4ffbe33b71f9} 
+\index{EventControl@{EventControl}!EventControl@{EventControl}}
+\index{EventControl@{EventControl}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{EventControl()}{EventControl()}}
+{\footnotesize\ttfamily Event\+Control\+::\+Event\+Control (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructor\+: create instance of \doxylink{classEventControl}{Event\+Control}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & maximum number of people allowed to be in the even \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventControl_a081fadf2c66dda120d7354ef657c54b6}\label{classEventControl_a081fadf2c66dda120d7354ef657c54b6} 
+\index{EventControl@{EventControl}!admit@{admit}}
+\index{admit@{admit}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{admit()}{admit()}}
+{\footnotesize\ttfamily void Event\+Control\+::admit (\begin{DoxyParamCaption}\item[{int}]{people }\end{DoxyParamCaption})}
+
+
+
+admit named number of people into event increment occupancy by that number of people 
+
+
+\begin{DoxyParams}{Parameters}
+{\em people} & count of people being admitted into the event \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classEventControl_a28fab454ba155ad1c6947c0e1d8a3b34}\label{classEventControl_a28fab454ba155ad1c6947c0e1d8a3b34} 
+\index{EventControl@{EventControl}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Event\+Control\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return the capacity of \doxylink{classEventControl}{Event\+Control} 
+
+\begin{DoxyReturn}{Returns}
+capacity 
+\end{DoxyReturn}
+\Hypertarget{classEventControl_afe3d16e190e88231f1218fb51a3aacd0}\label{classEventControl_afe3d16e190e88231f1218fb51a3aacd0} 
+\index{EventControl@{EventControl}!getNotification@{getNotification}}
+\index{getNotification@{getNotification}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{getNotification()}{getNotification()}}
+{\footnotesize\ttfamily Notification Event\+Control\+::get\+Notification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return notification for givent \doxylink{classEventControl}{Event\+Control} 
+
+\begin{DoxyReturn}{Returns}
+Notification 
+\end{DoxyReturn}
+\Hypertarget{classEventControl_a0c72fd07edebbed9193d440f52ec9091}\label{classEventControl_a0c72fd07edebbed9193d440f52ec9091} 
+\index{EventControl@{EventControl}!leaveEvent@{leaveEvent}}
+\index{leaveEvent@{leaveEvent}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{leaveEvent()}{leaveEvent()}}
+{\footnotesize\ttfamily void Event\+Control\+::leave\+Event (\begin{DoxyParamCaption}\item[{int}]{people }\end{DoxyParamCaption})}
+
+
+
+remove people from the event 
+
+
+\begin{DoxyItemize}
+\item reduce occupancy byt the number of people leaving event 
+\begin{DoxyParams}{Parameters}
+{\em people} & Number of people leaving the event \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classEventControl_a38d4b1d5bbaedba5dfc7ffb9728d2a7e}\label{classEventControl_a38d4b1d5bbaedba5dfc7ffb9728d2a7e} 
+\index{EventControl@{EventControl}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{setCapacity()}{setCapacity()}}
+{\footnotesize\ttfamily void Event\+Control\+::set\+Capacity (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+set the capacity of \doxylink{classEventControl}{Event\+Control} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & new capacity \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classEventControl_a4cc86daf831b83770dbd7879950659fa}\label{classEventControl_a4cc86daf831b83770dbd7879950659fa} 
+\index{EventControl@{EventControl}!updateNotification@{updateNotification}}
+\index{updateNotification@{updateNotification}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{updateNotification()}{updateNotification()}}
+{\footnotesize\ttfamily void Event\+Control\+::update\+Notification (\begin{DoxyParamCaption}\item[{Notification}]{notification }\end{DoxyParamCaption})}
+
+
+
+set \doxylink{classEventControl}{Event\+Control} notification to passed in notification 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notification} & new notification \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Control.\+h\item 
+src/Event\+Control.\+cpp\end{DoxyCompactItemize}

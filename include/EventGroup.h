@@ -9,6 +9,11 @@
 #include "Cascade.h"
 #include "Status.h"
 
+/**
+ * @class EventGroup
+ * @brief The Composite class
+ */
+
 class EventGroup : public EventComponent
 {
 public:
@@ -29,6 +34,9 @@ public:
 
 
 protected:
+	/**
+	 * @brief Child components contained in this event group
+	 */
 	std::vector<EventComponent *> children;
 
 private:

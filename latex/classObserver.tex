@@ -1,0 +1,74 @@
+\doxysection{Observer Class Reference}
+\hypertarget{classObserver}{}\label{classObserver}\index{Observer@{Observer}}
+
+
+\doxylink{classObserver}{Observer} interface for concrete observer with a subject to observe.  
+
+
+
+
+{\ttfamily \#include $<$Observer.\+h$>$}
+
+
+
+Inheritance diagram for Observer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObserver__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classObserver_afcc6b67be6c386f2f3d2c363aa59cb47}\label{classObserver_afcc6b67be6c386f2f3d2c363aa59cb47} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Handle memory dynamic management for \doxylink{classObserver}{Observer} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObserver_ac75e4b339faeb3ea6fe0a01bf0b4a215}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em update the observer when the subject changes \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObserver_abfcf1ccc2dfc05913d577fdf36345a0b}{detach}} ()=0
+\begin{DoxyCompactList}\small\item\em set observers subject to null \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classObserver}{Observer} interface for concrete observer with a subject to observe. 
+
+\begin{DoxyNote}{Note}
+GoF design pattern\+: \doxylink{classObserver}{Observer} -\/\texorpdfstring{$>$}{>} Participation\+: \doxylink{classObserver}{Observer} 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classObserver_abfcf1ccc2dfc05913d577fdf36345a0b}\label{classObserver_abfcf1ccc2dfc05913d577fdf36345a0b} 
+\index{Observer@{Observer}!detach@{detach}}
+\index{detach@{detach}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily virtual void Observer\+::detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set observers subject to null 
+
+
+
+Implemented in \mbox{\hyperlink{classEventComponent_aff9321cf604668d33a36dc518e75ea68}{Event\+Component}}.
+
+\Hypertarget{classObserver_ac75e4b339faeb3ea6fe0a01bf0b4a215}\label{classObserver_ac75e4b339faeb3ea6fe0a01bf0b4a215} 
+\index{Observer@{Observer}!update@{update}}
+\index{update@{update}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Observer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+update the observer when the subject changes 
+
+
+
+Implemented in \mbox{\hyperlink{classEventComponent_a9d365bddc46e9da03e2f7d9ccba8cc26}{Event\+Component}}, and \mbox{\hyperlink{classEventGroup_a8d0c4041627cbacda60f7a984945f97a}{Event\+Group}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Observer.\+h\end{DoxyCompactItemize}

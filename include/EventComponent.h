@@ -27,7 +27,6 @@ public:
 	 * @brief Constructor: create instance of of event class.
 	 * note that you cannot instantiate object of abstract class
 	 * @param name identifier name for given EventComponent
-	 * @param subject Event control to be observed 
 	 */
 	EventComponent(std::string name);
 
@@ -42,7 +41,6 @@ public:
 	 * @brief remove target EventComponent from children list
 	 * - does nothing for leaf components
 	 * @param target the child to be removed from the children list
-	 * @return void
 	 */
 	virtual void remove(EventComponent *target) {}
 
@@ -52,7 +50,6 @@ public:
 	/**
 	 * @brief print information for EventComponent
 	 * @param indent Level of indention for nested components
-	 * @return void
 	 */
 	virtual void display(std::string indent = "");
 
@@ -71,7 +68,6 @@ public:
 	/**
 	 * @brief update EventComponent name
 	 * @param name new name
-	 * @return void
 	 */
 	void setName(std::string name);
 
@@ -85,7 +81,6 @@ public:
 	 * @brief set status to new passed in status
 	 * - sets status based on the notification passed in
 	 * @param status new status
-	 * @return void
 	 */
 	void setStatus(Status *status);
 
@@ -95,12 +90,11 @@ public:
 	 * @param notification Notification from subject
 	 * @return Status* new status
 	 */
-	virtual Status *determineStatus(Notification Notification);
+	virtual Status *determineStatus(Notification notification);
 
 	/**
 	 * @brief set Subject to passed in subject parameter
 	 * @param subject new subject
-	 * @return void
 	 */
 	virtual void setSubject(EventControl *subject);
 	
@@ -111,10 +105,20 @@ protected:
 	 * @brief subject being observed
 	 */
 	EventControl *subject;
+
+	/**Name of the component */
 	std::string name;
+
+	/**Most recent notification received by the Component */
 	Notification notification;
+
+	/**Maximum capacity of the component */
 	int capacity;
+
+	/**Current occupancy of the component */
 	int occupancy;
+
+	/**Current status of the component */
 	Status *status;
 
 private:

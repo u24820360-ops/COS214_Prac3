@@ -7,6 +7,11 @@
 
 #include "EventComponent.h"
 
+/**
+ * @class Personnel
+ * @brief The Base Class for the Personnel teams
+ */
+
 class Personnel : public EventComponent
 {
 public:
@@ -25,14 +30,12 @@ public:
 	 * @brief set personnel list to passed in parameter
 	 * - replaces the entire personnel list
 	 * @param personnel vector<string> of personnel names
-	 * @return void 
 	 */
 	void setPersonnel(std::vector<std::string> personnel);
 	
 	/**
 	 * @brief add one person to personnel list
 	 * @param personnel name of person to be added
-	 * @return void
 	 */
 	void addPersonnel(std::string personnel);
 	

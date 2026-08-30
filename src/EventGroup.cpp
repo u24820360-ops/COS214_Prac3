@@ -48,7 +48,7 @@ void EventGroup::add(EventComponent *child)
 void EventGroup::update() 
 {
 	cout << "[C]: " << this->name << endl;
-	cout << "[Satus] " << (this->status? this->status->getMessage() : "null");
+	cout << "[Status] " << (this->status? this->status->getMessage() : "null");
 	auto iterator=this->children.begin();
 	while(iterator != this->children.end()) 
 	{
