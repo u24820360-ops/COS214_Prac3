@@ -19,7 +19,11 @@ run : $(TARGET)
 	./$(TARGET)
 
 mem : $(TARGET)
-	valgrind --leak-check=full --track-origins=yes ./$(TARGET) 2> memory.log 
+	valgrind --leak-check=full --track-origins=yes ./$(TARGET) 2> memory.log
+
+compress: bin/compress bin/pdf
+	./bin/compress
+	
 
 clean:
 	rm -rf $(OBJ_DIR) $(TARGET) 
